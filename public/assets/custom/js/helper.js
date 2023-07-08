@@ -185,7 +185,63 @@ function pembulatan_skor_ielts(angka) {
 }
 
 function writing(tipe_soal, task, url) {
-  if (tipe_soal == "Soal_002") {
+  if (tipe_soal == "Soal_001") {
+    if (task == 1) {
+      return `
+        <p class="question mb-3">
+            <b>Writing Task 1</b>
+        </p>
+
+        <p>You should spend about 20 minutes on this task.</p>
+
+        <table class="tableSoal w-100 mb-3">
+            <tr>
+                <td class="text-wrap p-3">
+                    <p>
+                        <b><i>The graph below shows the number of shops that closed and the number of new shops that opened in one country between 2011 and 2018.</i></b>
+                    </p>
+                    <p>
+                        <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <p>Write at least 150 words.</p>
+
+        <div class="">
+            <center>
+                <img src="${url}public/assets/img-soal/writing-1-soal-001.png" alt="" class="img-fluid">
+            </center>
+        </div>
+      `;
+    } else if (task == 2) {
+      return `
+        <p class="question mb-3">
+            <b>Writing Task 2</b>
+        </p>
+
+        <p>You should spend about 40 minutes on this task.</p>
+        <p>Write about the following topic:</p>
+
+        <table class="tableSoal w-100 mb-3">
+            <tr>
+                <td class="text-wrap p-3">
+                    <p>
+                        <i><b>In their advertising, businesses nowadays usually emphasise that their products are new in some way.</b></i>
+                    </p>
+                    <p>
+                        <i><b>Why is this? Do you think it is a positive or negative development?</b></i>
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+        <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p>Write at least 250 words</p>
+      `;
+    }
+  } else if (tipe_soal == "Soal_002") {
     if (task == 1) {
       return `
         <p class="question mb-3">
@@ -473,7 +529,7 @@ function required(form) {
   $.each($(form + " .required"), function () {
     if ($(this).val() == "") {
       eror = 1;
-      console.log($(this).attr("name"));
+      // console.log($(this).attr("name"));
       $(this).addClass("bg-red-lt");
     } else {
       $(this).removeClass("bg-red-lt");

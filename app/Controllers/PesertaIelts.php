@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use \Hermawan\DataTables\DataTable;
 use App\Models\PesertaIeltsModel;
+use App\Models\PesertaModel;
 
 use \Mpdf\Mpdf;
 // library qrcode & pdf 
@@ -20,6 +21,115 @@ use App\Libraries\Pdfgenerator;
 
 class PesertaIelts extends BaseController
 {
+    public function formRegistrasi(){
+        $data['title'] = 'Registrasi';
+        return view('pages/registrasi', $data);
+    }
+
+    public function prosesRegistrasi(){
+        $db = db_connect();
+        $session = session();
+
+        $validasi  = \Config\Services::validation();
+        $aturan = [
+            'nama' => [
+                'label' => 'Nama',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
+            'tgl_lahir' => [
+                'label' => 'Tgl Lahir',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'email' => [
+                'label' => 'Email',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+            'no_hp' => [
+                'label' => 'No. Whatsapp',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi',
+                ]
+            ],
+        ];
+
+        $validasi->setRules($aturan);
+        if ($validasi->withRequest($this->request)->run()) {
+            $nama = $this->request->getPost('nama');
+            $tgl_lahir = $this->request->getPost('tgl_lahir');
+            $email = $this->request->getPost('email');
+            $no_hp = $this->request->getPost('no_hp');
+
+            $data = [
+                'nama' => $nama,
+                'tgl_lahir' => $tgl_lahir,
+                'email' => $email,
+                'no_hp' => $no_hp,
+                'tgl_daftar' => date("Y-m-d")
+            ];
+
+            $model = new PesertaModel();
+
+            $searchMember = $model->where(['hapus' => 0, 'nama' => $nama, 'email' => $email, 'no_hp' => $no_hp, 'tgl_lahir' => $tgl_lahir])->find();
+            if ($searchMember) {
+                
+            } else {
+                $model->save($data);
+            }
+
+            $replace_wa = array(
+                ' ' => '%20',
+                '"' => '%22',
+                '/' => '%2F',
+                '@' => '%40',
+                '+' => '%2B'
+            );
+    
+            $data_nama = str_replace(array_keys($replace_wa), $replace_wa, $nama);
+            $data_email = str_replace(array_keys($replace_wa), $replace_wa, $email);
+            $data_no_hp = str_replace(array_keys($replace_wa), $replace_wa, $no_hp);
+            $wa_admin = $db->query("SELECT * FROM config WHERE field = 'no_wa'")->getRowArray();
+    
+            $link_konfirmasi = "https://wa.me/$wa_admin[value]?text=Halo%20kak%2C%20saya%20sudah%20berhasil%20mengisi%20format%20pendaftaran%20dengan%20detail%20sebagai%20berikut%2C%20%0ANama%20Lengkap%3A%20$data_nama%0AEmail%20Lengkap%3A%20$data_email%0ANo%20Whatsapp%3A%20$data_no_hp%0A";
+
+            
+            $data = $db->query("SELECT * FROM config WHERE field = 'msg_registrasi'")->getRowArray();
+
+            $msg = '
+            <div class="alert alert-important alert-success alert-dismissible" role="alert">
+                <div class="d-flex">
+                    <div class="text-light">
+                        '.$data['value'].' dengan klik <a href="'.$link_konfirmasi.'" target="_blank">disini</a>
+                    </div>
+                </div>
+            </div>';
+            
+            $session->setFlashdata('msg', $msg);
+        } else {
+            $session->setFlashdata('msg_error', 
+                '
+                <div class="alert alert-important alert-danger alert-dismissible" role="alert">
+                    <div class="d-flex">
+                        <div class="text-light">
+                            ' . $validasi->listErrors() . '
+                        </div>
+                    </div>
+                </div>
+                ');
+        }
+
+        return redirect()->to(base_url('/form-registrasi'));
+    }
+
     public function cekEmail(){
         $id_tes = $this->request->getPost('id_tes');
         $email = $this->request->getPost('email');
@@ -42,12 +152,12 @@ class PesertaIelts extends BaseController
         $session = session();
         $db = db_connect();
         
-        $data = $this->add_jawaban_soal_002();
+        $data = $this->add_jawaban_soal_ielts();
         $session->setFlashdata('msg', $data['msg']);
         return redirect()->to(base_url("/$data[url]/$data[id_tes]"));
     }
 
-    public function add_jawaban_soal_002(){
+    public function add_jawaban_soal_ielts(){
         $db = db_connect();
         helper("kuncijawaban_helper");
         
@@ -56,46 +166,11 @@ class PesertaIelts extends BaseController
         $tes = $db->query("SELECT * FROM tes WHERE id_tes = '$id_tes'")->getRowArray();
         $client = $db->query("SELECT * FROM client WHERE id_client = $tes[fk_id_client]")->getRowArray();
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
-        if($tes['tipe_soal'] == "Soal_002"){
-            $data_koreksi = soal_002($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_GT_002"){
-            $data_koreksi = soal_gt_002($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_GT_003"){
-            $data_koreksi = soal_gt_003($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_003"){
-            $data_koreksi = soal_003($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_Academic_Post_Test"){
-            $data_koreksi = soal_academic_post_test($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_Academic_Pretest"){
-            $data_koreksi = soal_academic_pretest($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_General_Post_Test"){
-            $data_koreksi = soal_general_post_test($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
-            $benar_listening = $data_koreksi['benar_listening'];
-            $benar_reading = $data_koreksi['benar_reading'];
-        } else if($tes['tipe_soal'] == "Soal_General_Pretest"){
-            $data_koreksi = soal_general_pretest($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
-            $jawaban_ietls = $data_koreksi['jawaban_ietls'];
+        if($tes['tipe_soal'] == "Soal_001"){
+            $data_koreksi = soal_001($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
+            $jawaban_ielts = $data_koreksi['jawaban_ielts'];
             $benar_listening = $data_koreksi['benar_listening'];
             $benar_reading = $data_koreksi['benar_reading'];
         }
@@ -127,7 +202,7 @@ class PesertaIelts extends BaseController
             "email" => $this->request->getPost("email"),
             "nilai_listening" => $benar_listening,
             "nilai_reading" => $benar_reading,
-            "text_listening_reading" => $jawaban_ietls,
+            "text_listening_reading" => $jawaban_ielts,
             "text_writing" => $text_writing,
             "no_doc" => $no
         ];

@@ -36,7 +36,7 @@ class Login extends BaseController
                 ];
                 $session->set($ses_data);
 
-                return redirect()->to(base_url('/client'));
+                return redirect()->to(base_url('/tes'));
             } else {
                 $session->setFlashdata('msg', 'Password salah');
                 return redirect()->to(base_url('/login'));

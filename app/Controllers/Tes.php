@@ -437,6 +437,9 @@ class Tes extends BaseController
             $nama_tes = $this->request->getPost('nama_tes');
             $tipe_tes = $this->request->getPost('tipe_tes');
             $tipe_soal = $this->request->getPost('tipe_soal');
+            $listening = $this->request->getPost('listening');
+            $reading = $this->request->getPost('reading');
+            $writing = $this->request->getPost('writing');
             $catatan = $this->request->getPost('catatan');
             $kuota = $this->request->getPost('kuota');
             $password = $this->request->getPost('password');
@@ -448,6 +451,9 @@ class Tes extends BaseController
                 'nama_tes' => $nama_tes,
                 'tipe_tes' => $tipe_tes,
                 'tipe_soal' => $tipe_soal,
+                'listening' => ($listening == 'true') ? 1 : 0,
+                'reading' => ($reading == 'true') ? 1 : 0,
+                'writing' => ($writing == 'true') ? 1 : 0,
                 'catatan' => $catatan,
                 'kuota' => $kuota,
                 'password' => $password,
@@ -516,23 +522,38 @@ class Tes extends BaseController
             $data['title'] = $data['nama_tes'];
             $data['logo'] = base_url().'/public/assets/logo-client/'.$data['logo'];
             
-            if($data['tipe_soal'] == "Soal_002"){
-                return view('pages/soal/soal-ielts-002', $data);
-            } else if($data['tipe_soal'] == "Soal_GT_002"){
-                return view('pages/soal/soal-ielts-gt-002', $data);
-            } else if($data['tipe_soal'] == "Soal_GT_003"){
-                return view('pages/soal/soal-ielts-gt-003', $data);
-            } else if($data['tipe_soal'] == "Soal_003"){
-                return view('pages/soal/soal-ielts-003', $data);
-            } else if($data['tipe_soal'] == "Soal_Academic_Post_Test"){
-                return view('pages/soal/soal-ielts-academic-post-test', $data);
-            } else if($data['tipe_soal'] == "Soal_Academic_Pretest"){
-                return view('pages/soal/soal-ielts-academic-pretest', $data);
-            } else if($data['tipe_soal'] == "Soal_General_Post_Test"){
-                return view('pages/soal/soal-ielts-general-post-test', $data);
-            } else if($data['tipe_soal'] == "Soal_General_Pretest"){
-                return view('pages/soal/soal-ielts-general-pretest', $data);
+            if($data['tipe_soal'] == "Soal_001"){
+                return view('pages/soal/soal-ielts-001', $data);
             }
+        }
+    }
+
+    public function jawabanPeserta($id){
+        $db = db_connect();
+        $model = new PesertaIeltsModel();
+        $peserta = $db->query("SELECT * FROM peserta_ielts WHERE MD5(id) = '$id'")->getRowArray();
+
+        $model = new TesModel();
+        $tes = $model->find($peserta['id_tes']);
+        
+        $client = $db->query("SELECT * FROM client WHERE id_client = $tes[fk_id_client]")->getRowArray();
+
+        $data = explode("|||", $peserta['text_listening_reading']);
+
+        $jawaban = [];
+        foreach ($data as $i => $data) {
+            $jawaban['listening_reading'][$i] = explode("&&&", $data);
+        }
+
+        $jawaban['writing'] = explode("|||", $peserta['text_writing']);
+        $jawaban['peserta'] = $peserta;
+
+        $jawaban['title'] = "Jawaban " . $peserta['first_name'] . " " .$peserta['last_name'];
+        $jawaban['logo'] = base_url().'/public/assets/logo-client/'.$client['logo'];
+        $jawaban['tes'] = $tes;
+
+        if($tes['tipe_soal'] == "Soal_001"){
+            return view("pages/soal/jawaban-soal-ielts-001", $jawaban);
         }
     }
 }

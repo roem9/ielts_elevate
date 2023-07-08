@@ -67,6 +67,7 @@ $routes->get('/tes/getPeserta/(.*)', 'Tes::getPeserta/$1', ['filter' => 'authAdm
 $routes->post('/tes/simpanPesertaIelts', 'Tes::simpanPesertaIelts', ['filter' => 'authAdmin']);
 $routes->post('/tes/simpanFeedbackWriting', 'Tes::simpanFeedbackWriting', ['filter' => 'authAdmin']);
 $routes->post('/tes/simpanFeedbackSpeaking', 'Tes::simpanFeedbackSpeaking', ['filter' => 'authAdmin']);
+$routes->get('/tes/jawabanPeserta/(.*)', 'Tes::jawabanPeserta/$1', ['filter' => 'authAdmin']);
 
 $routes->get('/clientarea', 'ClientArea::index');
 $routes->post('/clientarea/auth', 'ClientArea::auth');
@@ -88,6 +89,9 @@ $routes->get('/clientarea/getPeserta/(.*)', 'ClientArea::getPeserta/$1', ['filte
 $routes->post('/clientarea/simpanPesertaIelts', 'ClientArea::simpanPesertaIelts', ['filter' => 'authClient']);
 $routes->post('/clientarea/simpanFeedbackWriting', 'ClientArea::simpanFeedbackWriting', ['filter' => 'authClient']);
 $routes->post('/clientarea/simpanFeedbackSpeaking', 'ClientArea::simpanFeedbackSpeaking', ['filter' => 'authClient']);
+
+$routes->get('/form-registrasi', 'PesertaIelts::formRegistrasi');
+$routes->post('/registration/process', 'PesertaIelts::prosesRegistrasi');
 
 $routes->post('/PesertaIelts/cekEmail', 'PesertaIelts::cekEmail');
 $routes->post('/PesertaIelts/passwordCheck', 'PesertaIelts::passwordCheck');

@@ -27,29 +27,25 @@
   <link href="<?= base_url()?>/public/assets/css/data-table-custom.css" rel="stylesheet" />
   <link href="https://cdn.datatables.net/responsive/2.4.0/css/responsive.dataTables.min.css" rel="stylesheet" />
 
-  <!-- custom javascript -->
-  <script src="<?= base_url()?>/public/assets/custom/js/validation.js"></script>
-  <script src="<?= base_url()?>/public/assets/custom/js/helper.js"></script>
-
   <!-- clipboard  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
 
 </head>
 
 <body class="g-sidenav-show  bg-gray-100">
-  <?php if ($title != 'Login' && $title != 'Sertifikat') : ?>
+  <?php if ($title != 'Login' && $title != 'Sertifikat' && $title != 'Registrasi') : ?>
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-white" id="sidenav-main" data-color="info">
       <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="/">
           <img src="<?= base_url()?>/public/assets/img/logo.png" class="navbar-brand-img h-100" alt="main_logo">
-          <span class="ms-1 font-weight-bold">IMPRINTEST</span>
+          <span class="ms-1 font-weight-bold">Elevate English Course</span>
         </a>
       </div>
       <hr class="horizontal dark mt-0">
       <div class="collapse navbar-collapse w-auto h-auto pb-0" id="sidenav-collapse-mai">
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link <?= ($sidebar == "client") ? 'active' : '' ?>" href="<?= base_url('client') ?>">
               <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -59,7 +55,7 @@
               </div>
               <span class="nav-link-text ms-1">Client</span>
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link <?= ($sidebar == "tes") ? 'active' : '' ?>" href="<?= base_url('tes') ?>">
               <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -72,7 +68,7 @@
               <span class="nav-link-text ms-1">Tes IELTS</span>
             </a>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link <?= ($sidebar == "testoefl") ? 'active' : '' ?>" href="<?= base_url('testoefl') ?>">
               <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-journal-text" viewBox="0 0 16 16">
@@ -103,7 +99,7 @@
               </div>
               <span class="nav-link-text ms-1">Sub Soal TOEFL</span>
             </a>
-          </li>
+          </li> -->
           
           <li class="nav-item">
             <a class="nav-link" href="javascript:void(0)" onclick="logout()">
@@ -179,7 +175,7 @@
                 <div class="copyright text-center text-sm text-muted text-lg-start">
                   © <script>
                     document.write(new Date().getFullYear())
-                  </script> imprintest.com
+                  </script> sisting.id
                 </div>
               </div>
             </div>
@@ -213,6 +209,10 @@
   <!-- ckeditor  -->
   <!-- <script src="https://cdn.ckeditor.com/4.20.1/basic/ckeditor.js"></script> -->
   <script src="//cdn.ckeditor.com/4.20.2/full/ckeditor.js"></script>
+  
+  <!-- custom javascript -->
+  <script src="<?= base_url()?>/public/assets/custom/js/validation.js"></script>
+  <script src="<?= base_url()?>/public/assets/custom/js/helper.js"></script>
 
   <?= $this->renderSection('js-script') ?>
   <script>

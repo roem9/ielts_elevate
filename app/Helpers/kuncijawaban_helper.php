@@ -1,4 +1,408 @@
 <?php
+    function soal_001($jawaban_listening_peserta, $jawaban_reading_peserta){
+        $jawaban_listening = [
+            [
+                "no" => 1,
+                "jawaban" => ["litter"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["dogs"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["insects"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["butterflies"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["wall"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["island"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["boots"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["beginners"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["spoons"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["35", "thirty five"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["<b>A.</b> 9"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["<b>C.</b> light green"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["<b>B.</b> Lunchbox 2"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["<b>B.</b> hand it to a member of staff"],
+            ],
+            // ini 
+            [
+                "no" => 15,
+                "jawaban" => ["A", "D"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["D", "A"],
+            ],
+            // ini 
+            [
+                "no" => 17,
+                "jawaban" => ["B", "C"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["C", "B"],
+            ],
+            // ini 
+            [
+                "no" => 19,
+                "jawaban" => ["D", "E"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["E", "D"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["<b>A.</b> making initial contact with suitable farms"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["<b>B.</b> a sheep that was having difficulty giving birth."],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["<b>B.</b> were mainly reared for their meat."],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["<b>A.</b> These should only be given if specially needed."],
+            ],
+            [
+                "no" => 25,
+                "jawaban" => ["<b>C.</b> She made a mistake when storing milk."],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["<b>C.</b> Some jobs could be done by the farmer rather than by a vet."],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["puzzle"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["logic"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["confusion"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["meditation"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["stone"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["coins"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["tree"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["breathing"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["paper"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["anxiety"],
+            ],
+        ];
+
+        $jawaban_reading = [
+            [
+                "no" => 1,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 2,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 3,
+                "jawaban" => ["NOT GIVEN"],
+            ],
+            [
+                "no" => 4,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 5,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 6,
+                "jawaban" => ["FALSE"],
+            ],
+            [
+                "no" => 7,
+                "jawaban" => ["TRUE"],
+            ],
+            [
+                "no" => 8,
+                "jawaban" => ["violent"],
+            ],
+            [
+                "no" => 9,
+                "jawaban" => ["tool"],
+            ],
+            [
+                "no" => 10,
+                "jawaban" => ["meat"],
+            ],
+            [
+                "no" => 11,
+                "jawaban" => ["photographer"],
+            ],
+            [
+                "no" => 12,
+                "jawaban" => ["game"],
+            ],
+            [
+                "no" => 13,
+                "jawaban" => ["frustration"],
+            ],
+            [
+                "no" => 14,
+                "jawaban" => ["iv"],
+            ],
+            [
+                "no" => 15,
+                "jawaban" => ["vii"],
+            ],
+            [
+                "no" => 16,
+                "jawaban" => ["ii"],
+            ],
+            [
+                "no" => 17,
+                "jawaban" => ["v"],
+            ],
+            [
+                "no" => 18,
+                "jawaban" => ["i"],
+            ],
+            [
+                "no" => 19,
+                "jawaban" => ["viii"],
+            ],
+            [
+                "no" => 20,
+                "jawaban" => ["vi"],
+            ],
+            [
+                "no" => 21,
+                "jawaban" => ["city"],
+            ],
+            [
+                "no" => 22,
+                "jawaban" => ["priests"],
+            ],
+            [
+                "no" => 23,
+                "jawaban" => ["trench"],
+            ],
+            [
+                "no" => 24,
+                "jawaban" => ["location"],
+            ],
+            // ini 
+            [
+                "no" => 25,
+                "jawaban" => ["B", "D"],
+            ],
+            [
+                "no" => 26,
+                "jawaban" => ["D", "B"],
+            ],
+            [
+                "no" => 27,
+                "jawaban" => ["<b>B.</b> the extent to which AI will after the nature of the work that people do."],
+            ],
+            [
+                "no" => 28,
+                "jawaban" => ["<b>D.</b> It is a key factor driving current developments in the workplace."],
+            ],
+            [
+                "no" => 29,
+                "jawaban" => ["<b>C.</b> staff making sure that AI produces the results that they want"],
+            ],
+            [
+                "no" => 30,
+                "jawaban" => ["<b>D.</b> illustrates how changes in the job market can be successfully handled."],
+            ],
+            [
+                "no" => 31,
+                "jawaban" => ["G"],
+            ],
+            [
+                "no" => 32,
+                "jawaban" => ["E"],
+            ],
+            [
+                "no" => 33,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 34,
+                "jawaban" => ["F"],
+            ],
+            [
+                "no" => 35,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 36,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 37,
+                "jawaban" => ["C"],
+            ],
+            [
+                "no" => 38,
+                "jawaban" => ["A"],
+            ],
+            [
+                "no" => 39,
+                "jawaban" => ["B"],
+            ],
+            [
+                "no" => 40,
+                "jawaban" => ["C"],
+            ],
+        ];
+
+        $jawaban_ielts = "";
+
+        $benar_listening = 0;
+        foreach ($jawaban_listening_peserta as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
+                $data_jawaban[$j] = $data_jawaban_listening;
+            }
+
+            if($i == 15){
+                $data_ielts = dua_nomor_tidak_boleh_sama_listening($jawaban_listening_peserta[14], $jawaban_listening_peserta[15], 'A', 'D');
+
+                $jawaban_ielts .= $data_ielts['jawaban_ielts'];
+                $benar_listening = $benar_listening + $data_ielts['benar_listening'];
+            } else if($i == 17){
+                $data_ielts = dua_nomor_tidak_boleh_sama_listening($jawaban_listening_peserta[16], $jawaban_listening_peserta[17], 'B', 'C');
+
+                $jawaban_ielts .= $data_ielts['jawaban_ielts'];
+                $benar_listening = $benar_listening + $data_ielts['benar_listening'];
+            } else if($i == 19){
+                $data_ielts = dua_nomor_tidak_boleh_sama_listening($jawaban_listening_peserta[18], $jawaban_listening_peserta[19], 'D', 'E');
+
+                $jawaban_ielts .= $data_ielts['jawaban_ielts'];
+                $benar_listening = $benar_listening + $data_ielts['benar_listening'];
+            } else if($i != 14 && $i != 16 && $i != 18) {
+                if (in_array(trim($jawaban), $data_jawaban)){
+                    $status = "Benar";
+                    $benar_listening++;
+                } else {
+                    $status = "Salah";
+                }
+
+                $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            }
+
+        }
+
+        $benar_reading = 0;
+        foreach ($jawaban_reading_peserta as $i => $jawaban) {
+            $data_jawaban = [];
+
+            foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
+                $data_jawaban[$j] = $data_jawaban_reading;
+            }
+
+            if($i == 25){
+                $data_ielts = dua_nomor_tidak_boleh_sama_reading($jawaban_reading_peserta[24], $jawaban_reading_peserta[25], 'B', 'D');
+
+                $jawaban_ielts .= $data_ielts['jawaban_ielts'];
+                $benar_reading = $benar_reading + $data_ielts['benar_reading'];
+            } else if($i != 24) {
+                if (in_array(trim($jawaban), $data_jawaban)){
+                    $status = "Benar";
+                    $benar_reading++;
+                } else {
+                    $status = "Salah";
+                }
+    
+                $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            }
+        }
+
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
+
+        $data_koreksi = [
+            'jawaban_ielts' =>  $jawaban_ielts,
+            'benar_listening' =>  $benar_listening,
+            'benar_reading' =>  $benar_reading
+        ];
+
+        return $data_koreksi;
+    }
 
     function soal_002($jawaban_listening_peserta, $jawaban_reading_peserta){
         $jawaban_listening = [
@@ -330,7 +734,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -347,7 +751,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -360,25 +764,25 @@
 
             if($i == 8){
                 if(strtolower($jawaban_reading_peserta[7]) == 'sea mammals' && strtolower($jawaban_reading_peserta[8]) == 'fish'){
-                    $jawaban_ietls .= 'Reading&&&sea mammals&&&Benar|||Reading&&&fish&&&Benar|||';
+                    $jawaban_ielts .= 'Reading&&&sea mammals&&&Benar|||Reading&&&fish&&&Benar|||';
                     $benar_reading = $benar_reading + 2;
                 } else if(strtolower($jawaban_reading_peserta[7]) == 'fish' && strtolower($jawaban_reading_peserta[8]) == 'sea mammals'){
-                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&sea mammals&&&Benar|||';
+                    $jawaban_ielts .= 'Reading&&&fish&&&Benar|||Reading&&&sea mammals&&&Benar|||';
                     $benar_reading = $benar_reading + 2;
                 } else if(strtolower($jawaban_reading_peserta[7]) == 'fish'){
-                    $jawaban_ietls .= 'Reading&&&fish&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Reading&&&fish&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
                     $benar_reading++;
                 } else if(strtolower($jawaban_reading_peserta[7]) == 'sea mammals'){
-                    $jawaban_ietls .= 'Reading&&&sea mammals&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Reading&&&sea mammals&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
                     $benar_reading++;
                 } else if(strtolower($jawaban_reading_peserta[8]) == 'fish'){
-                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&fish&&&Benar|||';
+                    $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&fish&&&Benar|||';
                     $benar_reading++;
                 } else if(strtolower($jawaban_reading_peserta[8]) == 'sea mammals'){
-                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&sea mammals&&&Benar|||';
+                    $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&sea mammals&&&Benar|||';
                     $benar_reading++;
                 } else {
-                    $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[7])).'&&&Salah|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_reading_peserta[8])).'&&&Salah|||';
                 }
             } else if($i != 7) {
                 if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
@@ -388,14 +792,14 @@
                     $status = "Salah";
                 }
     
-                $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+                $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
             }
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -732,7 +1136,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -749,7 +1153,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -767,13 +1171,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -1110,7 +1514,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -1127,7 +1531,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -1145,13 +1549,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -1491,7 +1895,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -1503,47 +1907,47 @@
 
             if($i == 11){
                 if(strtolower($jawaban_listening_peserta[10]) == 'b' && strtolower($jawaban_listening_peserta[11]) == 'e'){
-                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&e&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&b&&&Benar|||Listening&&&e&&&Benar|||';
                     $benar_listening = $benar_listening + 2;
                 } else if(strtolower($jawaban_listening_peserta[10]) == 'e' && strtolower($jawaban_listening_peserta[11]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&e&&&Benar|||Listening&&&b&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&e&&&Benar|||Listening&&&b&&&Benar|||';
                     $benar_listening = $benar_listening + 2;
                 } else if(strtolower($jawaban_listening_peserta[10]) == 'e'){
-                    $jawaban_ietls .= 'Listening&&&e&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&e&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[10]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[11]) == 'e'){
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&e&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&e&&&Benar|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[11]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&b&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&b&&&Benar|||';
                     $benar_listening++;
                 } else {
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[10])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[11])).'&&&Salah|||';
                 }
             } else if($i == 13){
                 if(strtolower($jawaban_listening_peserta[12]) == 'b' && strtolower($jawaban_listening_peserta[13]) == 'c'){
-                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&c&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&b&&&Benar|||Listening&&&c&&&Benar|||';
                     $benar_listening = $benar_listening + 2;
                 } else if(strtolower($jawaban_listening_peserta[12]) == 'c' && strtolower($jawaban_listening_peserta[13]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&c&&&Benar|||Listening&&&b&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&c&&&Benar|||Listening&&&b&&&Benar|||';
                     $benar_listening = $benar_listening + 2;
                 } else if(strtolower($jawaban_listening_peserta[12]) == 'c'){
-                    $jawaban_ietls .= 'Listening&&&c&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&c&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[12]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&b&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[13]) == 'c'){
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&c&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&c&&&Benar|||';
                     $benar_listening++;
                 } else if(strtolower($jawaban_listening_peserta[13]) == 'b'){
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&b&&&Benar|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&b&&&Benar|||';
                     $benar_listening++;
                 } else {
-                    $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
+                    $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[12])).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_listening_peserta[13])).'&&&Salah|||';
                 }
             } else if($i != 10 && $i != 12){
                 if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
@@ -1553,7 +1957,7 @@
                     $status = "Salah";
                 }
     
-                $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+                $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
             }
         }
 
@@ -1572,13 +1976,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -1909,7 +2313,7 @@
             ]
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -1926,7 +2330,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -1944,13 +2348,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -2285,7 +2689,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -2302,7 +2706,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -2320,13 +2724,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -2661,7 +3065,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -2678,7 +3082,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -2696,13 +3100,13 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
@@ -3037,7 +3441,7 @@
             ],
         ];
 
-        $jawaban_ietls = "";
+        $jawaban_ielts = "";
 
         $benar_listening = 0;
         foreach ($jawaban_listening_peserta as $i => $jawaban) {
@@ -3054,7 +3458,7 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
         $benar_reading = 0;
@@ -3072,17 +3476,83 @@
                 $status = "Salah";
             }
 
-            $jawaban_ietls .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
+            $jawaban_ielts .= 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban)).'&&&'.$status.'|||';
         }
 
-        $jawaban_ietls = substr($jawaban_ietls, 0, -3);
+        $jawaban_ielts = substr($jawaban_ielts, 0, -3);
 
         $data_koreksi = [
-            'jawaban_ietls' =>  $jawaban_ietls,
+            'jawaban_ielts' =>  $jawaban_ielts,
             'benar_listening' =>  $benar_listening,
             'benar_reading' =>  $benar_reading
         ];
 
         return $data_koreksi;
     }
+
+
+    function dua_nomor_tidak_boleh_sama_listening($jawaban_no_awal, $jawaban_no_akhir, $kunci_no_awal, $kunci_no_akhir){
+        $benar_listening = 0;
+        if($jawaban_no_awal == $kunci_no_awal && $jawaban_no_akhir == $kunci_no_akhir){
+            $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_listening = $benar_listening + 2;
+        } else if($jawaban_no_awal == $kunci_no_akhir && $jawaban_no_akhir == $kunci_no_awal){
+            $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_listening = $benar_listening + 2;
+        } else if($jawaban_no_awal == $kunci_no_akhir){
+            $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+            $benar_listening++;
+        } else if($jawaban_no_awal == $kunci_no_awal){
+            $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+            $benar_listening++;
+        } else if($jawaban_no_akhir == $kunci_no_akhir){
+            $jawaban_ielts = 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_listening++;
+        } else if($jawaban_no_akhir == $kunci_no_awal){
+            $jawaban_ielts = 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_listening++;
+        } else {
+            $jawaban_ielts = 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+        }
+
+        $data = [
+            "jawaban_ielts" => $jawaban_ielts,
+            "benar_listening" => $benar_listening
+        ];
+
+        return $data;
+    }
+
+    function dua_nomor_tidak_boleh_sama_reading($jawaban_no_awal, $jawaban_no_akhir, $kunci_no_awal, $kunci_no_akhir){
+        $benar_reading = 0;
+        if($jawaban_no_awal == $kunci_no_awal && $jawaban_no_akhir == $kunci_no_akhir){
+            $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_reading = $benar_reading + 2;
+        } else if($jawaban_no_awal == $kunci_no_akhir && $jawaban_no_akhir == $kunci_no_awal){
+            $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_reading = $benar_reading + 2;
+        } else if($jawaban_no_awal == $kunci_no_akhir){
+            $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+            $benar_reading++;
+        } else if($jawaban_no_awal == $kunci_no_awal){
+            $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+            $benar_reading++;
+        } else if($jawaban_no_akhir == $kunci_no_akhir){
+            $jawaban_ielts = 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_reading++;
+        } else if($jawaban_no_akhir == $kunci_no_awal){
+            $jawaban_ielts = 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
+            $benar_reading++;
+        } else {
+            $jawaban_ielts = 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
+        }
+
+        $data = [
+            "jawaban_ielts" => $jawaban_ielts,
+            "benar_reading" => $benar_reading
+        ];
+
+        return $data;
+    }
+
 ?>
