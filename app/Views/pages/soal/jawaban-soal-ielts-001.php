@@ -1244,6 +1244,7 @@
                             <?php foreach ($data_soal_27_30 as $data_soal) :?>
                                 <?= jawaban_pg_ielts($data_soal)?>
                             <?php endforeach;?>
+                            <?php $i = $i + COUNT($data_soal_27_30)?>
 
                         </div>
                     </div>
