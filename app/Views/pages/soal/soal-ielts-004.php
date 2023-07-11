@@ -1,6 +1,7 @@
 <?= $this->extend('pages/soal/layout/soal_layout') ?>
 
 <?= $this->section('sesi-listening') ?>
+<?php $i = 0 ?>
     <div class="shadow card mb-3">
         <div class="card-body">
             <center>
@@ -16,46 +17,48 @@
         <div class="card-body ps-4">
             <center><b>IELTS LISTENING</b></center>
             <p class="question">
-                <b>PART 1 <i>Questions 1–10</i></b><br>
+                <b>PART 1 </b>
+            </p>
+            <p class="question">
+                <i>Questions 1–10</i><br>
                 <i>Complete the notes below.</i><br>
                 <i>Write <b>ONE WORD AND/OR A NUMBER</b> for each answer.</i>
             </p>
             <table class="tableSoal w-100">
                 <tr>
                     <td class="p-3">
-                        <center><h6>Buckworth Conservation Group</h6></center>
-                        <p><b>Regular activities</b></p>
-                        <p>Beach</p>
+                        <center><h6>Advice on Surfing Holidays</h6></center>
+                        <p><b>Jack's advice</b></p>
                         <ul type="radio">
                             <li>
-                                making sure the beach does not have <b>1)</b> <?= soal_isian_ielts("jawaban_listening[0]")?> on it
+                                Recommends surfing for <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> holidays in the <u>summer</u>
                             </li>
                             <li>
-                                no <b>2)</b> <?= soal_isian_ielts("jawaban_listening[1]")?>
+                                Need to be quite <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?>
                             </li>
                         </ul>
-                        <p>Nature reserve</p>
+                        <p><b>Irish Surfing Locations</b></p>
+                        <p>County Clare</p>
                         <ul type="radio">
-                            <li>maintaining paths</li>
-                            <li>nesting boxes for birds installed</li>
-                            <li>next task is taking action to attract <b>3)</b> <?= soal_isian_ielts("jawaban_listening[2]")?> to the place</li>
-                            <li>identifying types of <b>4)</b> <?= soal_isian_ielts("jawaban_listening[3]")?></li>
-                            <li>building a new <b>5)</b> <?= soal_isian_ielts("jawaban_listening[4]")?></li>
+                            <li>Lahinch has some good quality <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> and surf schools</li>
+                            <li>There are famous cliffs nearby</li>
                         </ul>
-                        <p><b>Forthcoming events</b></p>
-                        <p>Saturday</p>
+                        <p>County Mayo</p>
                         <ul type="radio">
-                            <li>meet at Dunsmore Beach car park</li>
-                            <li>walk across the sands and reach the <b>6)</b> <?= soal_isian_ielts("jawaban_listening[5]")?></li>
-                            <li>take a picnic</li>
-                            <li>wear appropriate <b>7)</b> <?= soal_isian_ielts("jawaban_listening[6]")?></li>
+                            <li>Good surf school at <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> beach</li>
+                            <li>Surf camp lasts for one <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
+                            <li>Can also explore the local <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> by kayak</li>
                         </ul>
-                        <p>Woodwork session</p>
+                        <p><b>Weather</b></p>
                         <ul type="radio">
-                            <li>suitable for <b>8)</b> <?= soal_isian_ielts("jawaban_listening[7]")?> to participate in</li>
-                            <li>making <b>9)</b> <?= soal_isian_ielts("jawaban_listening[8]")?> out of wood</li>
-                            <li>17th, from 10 a.m. to 3 p.m.</li>
-                            <li>cost of session (no camping): <b>10)</b> £ <?= soal_isian_ielts("jawaban_listening[9]")?></li>
+                            <li>Best month to go: <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?>
+                            <li>Average temperature in summer: approx. <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> degrees</li>
+                        </ul>
+                        <p><b>Costs</b></p>
+                        <p>Equipment</p>
+                        <ul type="radio">
+                            <li>Wetsuit and surfboard: <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> euros per day</li>
+                            <li>Also advisable to hire <b><?= $i +1?>)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> for warmth</li>
                         </ul>
                     </td>
                 </tr>
@@ -66,81 +69,29 @@
     <div class="shadow card mb-3">
         <div class="card-body ps-4">
             <p class="question">
-                <b>PART 2 <i>Questions 11–20</i></b> <br>
-                <i>Questions 11–14</i> <br>
-                <i>Choose the correct letter, <b>A</b>, <b>B</b> or <b>C</b>.</i>
+                <b>PART 2</b>
             </p>
-            <div class="">
-                <center><h6><b>Boat trip round Tasmania</b></h6></center>
-                <?php
-                    $data_soal_11_14  = [
-                        [
-                            "no" => 11,
-                            "soal" => "What is the maximum number of people who can stand on each side of the boat?",
-                            "pilihan" => [
-                                "<b>A.</b> 9",
-                                "<b>B.</b> 15",
-                                "<b>C.</b> 18"
-                            ],
-                            "name" => "jawaban_listening[10]"
-                        ],
-                        [
-                            "no" => 12,
-                            "soal" => "What colour are the tour boats?",
-                            "pilihan" => [
-                                "<b>A.</b> dark red",
-                                "<b>B.</b> jet black",
-                                "<b>C.</b> light green"
-                            ],
-                            "name" => "jawaban_listening[11]"
-                        ],
-                        [
-                            "no" => 13,
-                            "soal" => "Which lunchbox is suitable for someone who doesn’t eat meat or fish?",
-                            "pilihan" => [
-                                "<b>A.</b> Lunchbox 1",
-                                "<b>B.</b> Lunchbox 2",
-                                "<b>C.</b> Lunchbox 3"
-                            ],
-                            "name" => "jawaban_listening[12]"
-                        ],
-                        [
-                            "no" => 14,
-                            "soal" => "What should people do with their litter?",
-                            "pilihan" => [
-                                "<b>A.</b> take it home",
-                                "<b>B.</b> hand it to a member of staff",
-                                "<b>C.</b> put it in the bins provided on the boat"
-                            ],
-                            "name" => "jawaban_listening[13]"
-                        ],
-                    ];
-                ?>
+            <p class="question">
+                <i>Questions 11–12</i><br>
+                <i>Choose <b>TWO</b> letters, <b>A-E</b>.</i> 
+            </p>
+            <p>
+                Which <b>TWO</b> facts are given about the school’s extended hours childcare service?
+                <b>A</b> It started recently.<br>
+                <b>B</b> More children attend after school than before school.<br>
+                <b>C</b> An average of 50 children attend in the mornings.<br>
+                <b>D</b> A child cannot attend both the before and after school sessions.<br>
+                <b>E</b> The maximum number of children who can attend is 70.<br>
+            </p>
+            <?php $choice = ["A", "B", "C", "D", "E"];?>
+            <p><b>11</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++;?></p>
+            <p><b>12</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++;?></p>
 
-                <?php foreach ($data_soal_11_14 as $data_soal) :?>
-                    <?= soal_pg_ielts($data_soal)?>
-                <?php endforeach;?>
+            <p class="question">
+                <i>Questions 17 and 18</i><br>
+                <i>Choose <b>TWO</b> letters, <b>A–E.</i></b>
+            </p>
 
-                <p class="question">
-                    <i>Questions 15 and 16</i><br>
-                    <i>Choose <b>TWO</b> letters, <b>A–E.</i></b>
-                </p>
-                <p>
-                    Which <b>TWO</b> features of the lighthouse does Lou mention?<br>
-                    <b>A</b> why it was built<br>
-                    <b>B</b> who built it<br>
-                    <b>C</b> how long it took to build<br>
-                    <b>D</b> who staffed it<br>
-                    <b>E</b> what it was built with
-                </p>
-                <?php $choice = ["A", "B", "C", "D", "E"];?>
-                <p><b>15</b> <?= soal_select_ielts("jawaban_listening[14]", $choice, "80")?></p>
-                <p><b>16</b> <?= soal_select_ielts("jawaban_listening[15]", $choice, "80")?></p>
-
-                <p class="question">
-                    <i>Questions 17 and 18</i><br>
-                    <i>Choose <b>TWO</b> letters, <b>A–E.</i></b>
-                </p>
                 <p>
                     Which <b>TWO</b> types of creature might come close to the boat?<br>
                     <b>A</b> sea eagles<br>

@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use \Hermawan\DataTables\DataTable;
 use App\Models\TesModel;
+use App\Models\PesertaModel;
 use App\Models\PesertaIeltsModel;
 
 class Tes extends BaseController
@@ -524,6 +525,14 @@ class Tes extends BaseController
             
             if($data['tipe_soal'] == "Soal_001"){
                 return view('pages/soal/soal-ielts-001', $data);
+            } else if($data['tipe_soal'] == "Soal_002"){
+                return view('pages/soal/soal-ielts-002', $data);
+            } else if($data['tipe_soal'] == "Soal_003"){
+                return view('pages/soal/soal-ielts-003', $data);
+            } else if($data['tipe_soal'] == "Soal_004"){
+                return view('pages/soal/soal-ielts-004', $data);
+            } else if($data['tipe_soal'] == "Soal_005"){
+                return view('pages/soal/soal-ielts-005', $data);
             }
         }
     }

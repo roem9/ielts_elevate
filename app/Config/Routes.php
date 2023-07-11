@@ -55,6 +55,9 @@ $routes->get('/testoefl/getHasilTesToefl/(.*)', 'TesToefl::getHasilTesToefl/$1',
 $routes->get('/testoefl/getPeserta/(.*)', 'TesToefl::getPeserta/$1', ['filter' => 'authAdmin']);
 $routes->post('/testoefl/simpanPesertaToefl', 'TesToefl::simpanPesertaToefl', ['filter' => 'authAdmin']);
 
+$routes->get('/peserta', 'Peserta::index', ['filter' => 'authAdmin']);
+$routes->get('/peserta/getAllPeserta', 'Peserta::getAllPeserta', ['filter' => 'authAdmin']);
+
 $routes->get('/tes', 'Tes::index', ['filter' => 'authAdmin']);
 $routes->get('/tes/getAllTes', 'Tes::getAllTes', ['filter' => 'authAdmin']);
 $routes->get('/tes/getTes/(.*)', 'Tes::getTes/$1', ['filter' => 'authAdmin']);

@@ -121,6 +121,10 @@
             <select name="tipe_soal" id="tipe_soal" class="multisteps-form__input form-control">
               <option value="">Pilih Tipe Soal</option>
               <option value="Soal_001">Soal_001</option>
+              <option value="Soal_002">Soal_002</option>
+              <option value="Soal_003">Soal_003</option>
+              <option value="Soal_004">Soal_004</option>
+              <option value="Soal_005">Soal_005</option>
             </select>
           </div>
           <div class="col-12 mb-3">

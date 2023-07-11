@@ -1327,19 +1327,6 @@
                                 Complete the summary using the list of words, <b>A-G</b>, below.<br>
                                 <i>Write the correct letter, <b>A-G</b>, in boxes 31-34 on your answer sheet.</i>
                             </p>
-                            <p><center><i>The ‘algorithmication’ of jobs</i></center></p>
-                            
-                            <?php $choice = ["A", "B", "C", "D", "E", "F", "G"];?>
-
-                            <p>
-                                Stella Pachidi of Cambridge Judge Business School has been focusing on the ‘algorithmication’ of jobs which rely not on production but on <b>31</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> .
-                            </p>
-                            <p>
-                                While monitoring a telecommunications company, Pachidi observed a growing <b>32</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> on the recommendations made by AI, as workers begin to learn through the ‘algorithm’s eyes’. Meanwhile, staff are deterred from experimenting and using their own <b>33</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?>, and are therefore prevented from achieving innovation.
-                            </p>
-                            <p>
-                                To avoid the kind of situations which Pachidi observed, researchers are trying to make AI’s decision-making process easier to comprehend, and to increase users’ <b>34</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> with regard to the technology.
-                            </p>
 
                             <table class="tableSoal w-100" border=0>
                                 <tr>
@@ -1356,6 +1343,21 @@
                                     <td><b>G</b> information</td>
                                 </tr>
                             </table>
+
+                            <p><center><i>The ‘algorithmication’ of jobs</i></center></p>
+                            
+                            <?php $choice = ["A", "B", "C", "D", "E", "F", "G"];?>
+
+                            <p>
+                                Stella Pachidi of Cambridge Judge Business School has been focusing on the ‘algorithmication’ of jobs which rely not on production but on <b>31</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> .
+                            </p>
+                            <p>
+                                While monitoring a telecommunications company, Pachidi observed a growing <b>32</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> on the recommendations made by AI, as workers begin to learn through the ‘algorithm’s eyes’. Meanwhile, staff are deterred from experimenting and using their own <b>33</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?>, and are therefore prevented from achieving innovation.
+                            </p>
+                            <p>
+                                To avoid the kind of situations which Pachidi observed, researchers are trying to make AI’s decision-making process easier to comprehend, and to increase users’ <b>34</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> with regard to the technology.
+                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -1440,15 +1442,6 @@
                                 <b>NB</b> You may use any letter more than once.
                             </p>
                             
-                            <?php $choice = ["A", "B", "C"];?>
-
-                            <p><b>35</b> Greater levels of automation will not result in lower employment. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-                            <p><b>36</b> There are several reasons why AI is appealing to businesses. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-                            <p><b>37</b> AI’s potential to transform people’s lives has parallels with major cultural shifts which occurred in previous eras. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-                            <p><b>38</b> It is important to be aware of the range of problems that AI causes. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-                            <p><b>39</b> People are going to follow a less conventional career path than in the past. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-                            <p><b>40</b> Authorities should take measures to ensure that there will be adequately paid work for everyone <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
-
                             <table class="tableSoal w-100">
                                 <tr>
                                     <td class="p-3">
@@ -1461,6 +1454,15 @@
                                     </td>
                                 </tr>
                             </table>
+                            <?php $choice = ["A", "B", "C"];?>
+
+                            <p><b>35</b> Greater levels of automation will not result in lower employment. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>36</b> There are several reasons why AI is appealing to businesses. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>37</b> AI’s potential to transform people’s lives has parallels with major cultural shifts which occurred in previous eras. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>38</b> It is important to be aware of the range of problems that AI causes. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>39</b> People are going to follow a less conventional career path than in the past. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>40</b> Authorities should take measures to ensure that there will be adequately paid work for everyone <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+
                         </div>
                     </div>
                 </div>
