@@ -731,10 +731,10 @@
                             </table>
                             
                             <?php $choice = ["YES", "NO", "NOT GIVEN"];?>
-                            <p><b>27</b> Wegener’s ideas about continental drift were widely disputed while he was alive. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>28</b> The idea that the continents remained fixed in place was defended in a number of respected scientific publications. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>29</b> Wegener relied on a limited range of scientific fields to support his theory of continental drift. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>30</b> The similarities between Wegener’s theory of continental drift and modern-day plate tectonics are enormous. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
+                            <p><b>27</b> Wegener’s ideas about continental drift were widely disputed while he was alive. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
+                            <p><b>28</b> The idea that the continents remained fixed in place was defended in a number of respected scientific publications. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
+                            <p><b>29</b> Wegener relied on a limited range of scientific fields to support his theory of continental drift. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
+                            <p><b>30</b> The similarities between Wegener’s theory of continental drift and modern-day plate tectonics are enormous. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
 
                             <table class="tableSoal w-100 mb-3" border=0>
                                 <tr>
