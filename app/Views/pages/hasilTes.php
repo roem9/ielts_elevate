@@ -29,6 +29,7 @@
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder desktop">S</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder desktop">OVERALL</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder all">Action</th>
+                  <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FL&R</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FW 1</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FW 2</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FS</th>
@@ -265,6 +266,39 @@
     </div>
   </div>
 </div>
+
+<!-- Modal FeedBack Speaking-->
+<div class="modal fade" id="modalFeedbackListeningReading" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFeedbackListeningReadingLabel">Edit Peserta</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- KALAU SUKSES -->
+        <div class="alert alert-success fade show text-light alert-sukses" role="alert" style="display: none">
+          <div class="sukses"></div>
+        </div>
+        <!-- KALAU ERROR -->
+        <div class="alert alert-danger fade show text-light alert-error" role="alert" style="display: none">
+          <div class="error"></div>
+        </div>
+        <form id="formFeedbackListeningReading">
+          <input type="hidden" name="id" id="id">
+          <div class="form-group">
+            <label for="feedback_listening_reading">Feedback Listening & Reading</label>
+            <textarea name="feedback_listening_reading" class="form-control" id="feedback_listening_reading" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+        <button type="button" class="btn btn-info" id="btnSimpanFeedbackListeningReading">Simpan</button>
+      </div>
+    </div>
+  </div>
+</div>
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
@@ -279,6 +313,7 @@
     btnSimpan.on("click", simpanPesertaIelts);
     $("#btnSimpanFeedbackWriting").on("click", simpanFeedbackWriting)
     $("#btnSimpanFeedbackSpeaking").on("click", simpanFeedbackSpeaking)
+    $("#btnSimpanFeedbackListeningReading").on("click", simpanFeedbackListeningReading)
 
     CKEDITOR.replace('kriteria_ta');
     CKEDITOR.replace('kriteria_cc');
@@ -288,6 +323,7 @@
     CKEDITOR.replace('kriteria_fluency');
     CKEDITOR.replace('kriteria_grammar');
     CKEDITOR.replace('kriteria_vocabulary');
+    CKEDITOR.replace('feedback_listening_reading');
 
     // $('html, .modal-body').animate({
     //     scrollTop: 0
@@ -406,6 +442,19 @@
                     <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/>
                   </svg>
+                </span>
+              </a>
+              `;
+          }
+        },
+        {
+          data: null,
+          className: 'text-xs w-1',
+          render: function(data, type, row) {
+            return `
+            <a href="javascript:void(0)" onclick="feedbackListeningReading('${row.id_peserta}')" class="me-1">
+                <span class="badge bg-gradient-info">
+                  Feedback Listening & Reading
                 </span>
               </a>
               `;
@@ -545,6 +594,31 @@
           scrollTop: 0
         }, 'slow');
       }
+    });
+  }
+
+  function feedbackListeningReading($id_peserta){
+    $.ajax({
+      url: "<?= base_url()?>/tes/getPeserta/" + $id_peserta,
+      type: "get",
+      success: function(hasil) {
+        var $obj = $.parseJSON(hasil);
+        if ($obj.id != '') {
+          let text_writing = $obj.text_writing;
+          text_writing = text_writing.split('|||');
+
+          $('#modalFeedbackListeningReading').modal('show');
+          $('#modalFeedbackListeningReadingLabel').html($obj.first_name + ' ' + $obj.last_name);
+          $('.alert-error').hide();
+          $('.alert-sukses').hide();
+
+          $(`#formFeedbackListeningReading [name='id']`).val($obj.id);
+
+          CKEDITOR.instances['feedback_listening_reading'].setData($obj.feedback_listening_reading);
+            
+        }
+      }
+
     });
   }
 
@@ -737,6 +811,45 @@
         nilai_fluency: nilai_fluency,
         nilai_grammar: nilai_grammar,
         nilai_vocabulary: nilai_vocabulary
+      },
+      success: function(hasil) {
+        var $obj = $.parseJSON(hasil);
+        if ($obj.sukses == false) {
+          $('.alert-sukses').hide();
+          $('.alert-error').show();
+          $('.error').html($obj.error);
+        } else {
+          $('.alert-error').hide();
+          $('.alert-sukses').show();
+          $('.sukses').html($obj.sukses);
+
+          if ($obj.edit == false) {
+            $("#formTambahTes")[0].reset();
+            CKEDITOR.instances['message'].setData('');
+          }
+
+          $('#table-hasil-tes').DataTable().ajax.reload();
+        }
+
+        $('#feedbackSpeaking .card-body').animate({
+          scrollTop: 0
+        }, 'slow');
+      }
+    });
+  }
+
+  function simpanFeedbackListeningReading(e) {
+    e.preventDefault();
+
+    let id = $(`#formFeedbackListeningReading [name='id']`).val();
+    let feedback_listening_reading = CKEDITOR.instances['feedback_listening_reading'].getData();
+
+    $.ajax({
+      url: "<?= base_url()?>/tes/simpanFeedbackListeningReading",
+      type: "POST",
+      data: {
+        id: id,
+        feedback_listening_reading: feedback_listening_reading
       },
       success: function(hasil) {
         var $obj = $.parseJSON(hasil);

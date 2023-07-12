@@ -244,44 +244,57 @@ function writing(tipe_soal, task, url) {
   } else if (tipe_soal == "Soal_002") {
     if (task == 1) {
       return `
-        <p class="question mb-3">
-          Writing Task 1
-        </p>
-        <table class="table" style="max-width: 100%">
-            <tr>
-                <td class="text-wrap">
-                    <p>
-                        <b>The chart below shows the unemployment rate and the number of people leaving Ireland from 1988 to 2008.</b>
-                    </p>
-                </td>
+      <p class="question mb-3">
+          <b>Writing Task 1</b>
+      </p>
 
-            </tr>
-        </table>
+      <p>You should spend about 20 minutes on this task.</p>
+
+      <table class="tableSoal w-100 mb-3">
+          <tr>
+              <td class="text-wrap p-3">
+                  <p>
+                      <b><i>The diagram below shows the process for recycling plastic bottles.</i></b>
+                  </p>
+                  <p>
+                      <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
+                  </p>
+              </td>
+          </tr>
+      </table>
+
+      <p>Write at least 150 words.</p>
 
         <div class="">
             <center>
-                <img src="${url}public/assets/img-soal/writing-002.jpeg" alt="" class="img-fluid">
+                <img src="${url}public/assets/img-soal/writing-1-soal-002.png" alt="" class="img-fluid">
             </center>
         </div>
       `;
     } else if (task == 2) {
       return `
         <p class="question mb-3">
-            Writing Task 2
+            <b>Writing Task 2</b>
         </p>
 
-        <table class="table">
+        <p>You should spend about 40 minutes on this task.</p>
+        <p>Write about the following topic:</p>
+
+        <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
+                <td class="text-wrap p-3">
                     <p>
-                        <b>Some people think that older school children should learn a wide range of subjects and develop knowledge. Others think that they should only study a small number of subjects in details. </b>
+                        <i><b>In the future all cars, buses and trucks will be driverless. The only people travelling inside these vehicles will be passengers.</b></i>
                     </p>
                     <p>
-                        <b>Discuss both views and give your opinion.</b>
+                        <i><b>Do you think the advantages of driverless vehicles outweight the disadvantages?</b></i>
                     </p>
                 </td>
             </tr>
         </table>
+
+        <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p>Write at least 250 words</p>
       `;
     }
   } else if (tipe_soal == "Soal_GT_002") {

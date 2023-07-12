@@ -408,7 +408,7 @@
         $jawaban_listening = [
             [
                 "no" => 1,
-                "jawaban" => ["28"],
+                "jawaban" => ["28", "28th"],
             ],
             [
                 "no" => 2,

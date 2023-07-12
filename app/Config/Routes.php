@@ -70,6 +70,7 @@ $routes->get('/tes/getPeserta/(.*)', 'Tes::getPeserta/$1', ['filter' => 'authAdm
 $routes->post('/tes/simpanPesertaIelts', 'Tes::simpanPesertaIelts', ['filter' => 'authAdmin']);
 $routes->post('/tes/simpanFeedbackWriting', 'Tes::simpanFeedbackWriting', ['filter' => 'authAdmin']);
 $routes->post('/tes/simpanFeedbackSpeaking', 'Tes::simpanFeedbackSpeaking', ['filter' => 'authAdmin']);
+$routes->post('/tes/simpanFeedbackListeningReading', 'Tes::simpanFeedbackListeningReading', ['filter' => 'authAdmin']);
 $routes->get('/tes/jawabanPeserta/(.*)', 'Tes::jawabanPeserta/$1', ['filter' => 'authAdmin']);
 
 $routes->get('/clientarea', 'ClientArea::index');

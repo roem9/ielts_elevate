@@ -353,6 +353,45 @@ class Tes extends BaseController
         return json_encode($hasil);
     }
 
+    public function simpanFeedbackListeningReading()
+    {
+        $validasi  = \Config\Services::validation();
+        $aturan = [
+            'feedback_listening_reading' => [
+                'label' => 'Feedback Litening & Reading',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ]
+        ];
+
+        $validasi->setRules($aturan);
+        if ($validasi->withRequest($this->request)->run()) {
+            $id = $this->request->getPost('id');
+            $feedback_listening_reading = $this->request->getPost('feedback_listening_reading');
+            
+            $data = [
+                'feedback_listening_reading' => $feedback_listening_reading
+            ];
+
+            $model = new PesertaIeltsModel();
+
+            $searchPeserta = $model->find($id);
+            if ($searchPeserta) {
+                $model->update($id, $data);
+                $hasil['sukses'] = "Berhasil mengubah data";
+                $hasil['error'] = true;
+                $hasil['edit'] = true;
+            }
+        } else {
+            $hasil['sukses'] = false;
+            $hasil['error'] = $validasi->listErrors();
+        }
+
+        return json_encode($hasil);
+    }
+
     // Get Tes
     public function getTes($id)
     {
@@ -563,6 +602,8 @@ class Tes extends BaseController
 
         if($tes['tipe_soal'] == "Soal_001"){
             return view("pages/soal/jawaban-soal-ielts-001", $jawaban);
+        } else if($tes['tipe_soal'] == "Soal_002"){
+            return view("pages/soal/jawaban-soal-ielts-002", $jawaban);
         }
     }
 }
