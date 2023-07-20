@@ -581,7 +581,7 @@
                                             "<b>C</b> The future is unlikely to see limitations on the capabilities of AI.",
                                             "<b>D</b> Experts disagree on which specialised tasks AI will be able to perform.",
                                         ],
-                                        "name" => "jawaban_listening[13]"
+                                        "name" => "jawaban_reading[13]"
                                     ],
                                     [
                                         "no" => 15,
@@ -592,7 +592,7 @@
                                             "<b>C</b> giving information about the development of machine intelligence",
                                             "<b>D</b> indicating which aspects of humans are the most advanced",
                                         ],
-                                        "name" => "jawaban_listening[14]"
+                                        "name" => "jawaban_reading[14]"
                                     ],
                                     [
                                         "no" => 16,
@@ -603,7 +603,7 @@
                                             "<b>C</b> to emphasise the need for cooperation",
                                             "<b>D</b> to point out the financial advantages of a course of action",
                                         ],
-                                        "name" => "jawaban_listening[15]"
+                                        "name" => "jawaban_reading[15]"
                                     ],
                                     [
                                         "no" => 17,
@@ -614,7 +614,7 @@
                                             "<b>C</b> creating a better world for all creatures on the planet",
                                             "<b>D</b> ensuring AI is more human-friendly than we are ourselves",
                                         ],
-                                        "name" => "jawaban_listening[16]"
+                                        "name" => "jawaban_reading[16]"
                                     ],
                                     [
                                         "no" => 18,
@@ -625,7 +625,7 @@
                                             "<b>C</b> Machines will be superior to humans in certain respects.",
                                             "<b>D</b> Many humans will oppose machines having a wider role.",
                                         ],
-                                        "name" => "jawaban_listening[17]"
+                                        "name" => "jawaban_reading[17]"
                                     ],
                                     [
                                         "no" => 19,
@@ -636,7 +636,7 @@
                                             "<b>C</b> There are a limited number of people with the knowledge to program machines.",
                                             "<b>D</b> Human shortcomings will make creating the machines we need more difficult.",
                                         ],
-                                        "name" => "jawaban_listening[18]"
+                                        "name" => "jawaban_reading[18]"
                                     ]
                                 ];
                             ?>

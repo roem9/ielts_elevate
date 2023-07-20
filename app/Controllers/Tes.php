@@ -195,6 +195,13 @@ class Tes extends BaseController
                     'required' => '{field} harus diisi'
                 ]
             ],
+            'tips' => [
+                'label' => 'Tips for further improvement',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ],
         ];
 
         $validasi->setRules($aturan);
@@ -209,6 +216,8 @@ class Tes extends BaseController
             $nilai_gra = $this->request->getPost('nilai_gra');
             $kriteria_lr = $this->request->getPost('kriteria_lr');
             $nilai_lr = $this->request->getPost('nilai_lr');
+            $tips = $this->request->getPost('tips');
+
             
             if($task == 1){
                 $data = [
@@ -219,7 +228,8 @@ class Tes extends BaseController
                     'kriteria_gra_1' => $kriteria_gra,
                     'nilai_gra_1' => $nilai_gra,
                     'kriteria_lr_1' => $kriteria_lr,
-                    'nilai_lr_1' => $nilai_lr
+                    'nilai_lr_1' => $nilai_lr,
+                    'tips_1' => $tips
                 ];
             } else if($task == 2){
                 $data = [
@@ -230,7 +240,8 @@ class Tes extends BaseController
                     'kriteria_gra_2' => $kriteria_gra,
                     'nilai_gra_2' => $nilai_gra,
                     'kriteria_lr_2' => $kriteria_lr,
-                    'nilai_lr_2' => $nilai_lr
+                    'nilai_lr_2' => $nilai_lr,
+                    'tips_2' => $tips
                 ];
             }
 
@@ -311,6 +322,13 @@ class Tes extends BaseController
                     'required' => '{field} harus diisi'
                 ]
             ],
+            'tips_3' => [
+                'label' => 'Tips for further improvement',
+                'rules' => 'required',
+                'errors' => [
+                    'required' => '{field} harus diisi'
+                ]
+            ]
         ];
 
         $validasi->setRules($aturan);
@@ -324,6 +342,7 @@ class Tes extends BaseController
             $nilai_grammar = $this->request->getPost('nilai_grammar');
             $kriteria_vocabulary = $this->request->getPost('kriteria_vocabulary');
             $nilai_vocabulary = $this->request->getPost('nilai_vocabulary');
+            $tips_3 = $this->request->getPost('tips_3');
             
             $data = [
                 'kriteria_topic' => $kriteria_topic,
@@ -333,7 +352,8 @@ class Tes extends BaseController
                 'kriteria_grammar' => $kriteria_grammar,
                 'nilai_grammar' => $nilai_grammar,
                 'kriteria_vocabulary' => $kriteria_vocabulary,
-                'nilai_vocabulary' => $nilai_vocabulary
+                'nilai_vocabulary' => $nilai_vocabulary,
+                'tips_3' => $tips_3
             ];
 
             $model = new PesertaIeltsModel();

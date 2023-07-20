@@ -18,20 +18,21 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 160px;
-    left: 235px;
-    width: 500px;
+    top: 320px;
+    left: 690px;
+    width: 80px;
     /* background-color: red; */
+    text-align: center;
   }
 
   .kriteria_ta {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 209px;
-    left: 43px;
-    width: 504px;
-    height: 145px;
+    top: 274px;
+    left: 33px;
+    width: 620px;
+    height: 118px;
     /* background-color: red; */
   }
 
@@ -39,22 +40,21 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 160px;
-    /* left: 420px; + 250 */
-    left: 845px;
-    width: 500px;
+    top: 485px;
+    left: 690px;
+    width: 80px;
     /* background-color: red; */
+    text-align: center;
   }
 
   .kriteria_cc {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 209px;
-    /* left: 43px; */
-    left: 575px;
-    width: 504px;
-    height: 145px;
+    top: 439px;
+    left: 33px;
+    width: 620px;
+    height: 118px;
     /* background-color: red; */
   }
 
@@ -62,21 +62,21 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 390px;
-    /* left: 420px; + 250 */
-    left: 260px;
-    width: 500px;
+    top: 650px;
+    left: 690px;
+    width: 80px;
     /* background-color: red; */
+    text-align: center;
   }
 
   .kriteria_lr {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 439px;
-    left: 43px;
-    width: 504px;
-    height: 145px;
+    top: 604px;
+    left: 33px;
+    width: 620px;
+    height: 118px;
     /* background-color: red; */
   }
 
@@ -84,22 +84,32 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 390px;
-    /* left: 420px; + 250 */
-    left: 945px;
-    width: 500px;
+    top: 815px;
+    left: 690px;
+    width: 80px;
     /* background-color: red; */
+    text-align: center;
   }
 
   .kriteria_gra {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 439px;
-    /* left: 43px; */
-    left: 575px;
-    width: 504px;
-    height: 145px;
+    top: 769px;
+    left: 33px;
+    width: 620px;
+    height: 118px;
+    /* background-color: red; */
+  }
+
+  .kriteria_tips {
+    font-family: 'GothamBook';
+    font-size: 14px;
+    position: absolute;
+    top: 940px;
+    left: 23px;
+    width: 746px;
+    height: 118px;
     /* background-color: red; */
   }
 
@@ -125,47 +135,52 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <!-- <img src="public/assets/sertifikat/feedback-speaking.png" style="width: 210mm; height: 297mm; margin: 0;" /> -->
+    <img src="public/assets/sertifikat/feedback-speaking.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
-  
-  <div class="name">
-    <?= $first_name .' '. $last_name?>
-  </div>
+
+  <!-- 'kriteria_topic' => $kriteria_topic,
+  'nilai_topic' => $nilai_topic,
+  'kriteria_fluency' => $kriteria_fluency,
+  'nilai_fluency' => $nilai_fluency,
+  'kriteria_grammar' => $kriteria_grammar,
+  'nilai_grammar' => $nilai_grammar,
+  'kriteria_vocabulary' => $kriteria_vocabulary,
+  'nilai_vocabulary' => $nilai_vocabulary, -->
 
   <div class="nilai_ta">
-    <b><?= $nilai_vocabulary?></b>
-  </div>
-
-  <div class="kriteria_ta">
-    <?= $kriteria_vocabulary?>
-  </div>
-
-  <div class="nilai_cc">
     <b><?= $nilai_topic?></b>
   </div>
 
-  <div class="kriteria_cc">
+  <div class="kriteria_ta">
     <?= $kriteria_topic?>
   </div>
 
-  <div class="nilai_lr">
+  <div class="nilai_cc">
     <b><?= $nilai_fluency?></b>
   </div>
 
-  <div class="kriteria_lr">
+  <div class="kriteria_cc">
     <?= $kriteria_fluency?>
   </div>
 
-  <div class="nilai_gra">
+  <div class="nilai_lr">
     <b><?= $nilai_grammar?></b>
   </div>
 
-  <div class="kriteria_gra">
+  <div class="kriteria_lr">
     <?= $kriteria_grammar?>
   </div>
 
-  <div class="tgl_tes">
-    <center>Jakarta, <?= date('d/m/Y', strtotime($tgl_tes))?></center>
+  <div class="nilai_gra">
+    <b><?= $nilai_vocabulary?></b>
+  </div>
+
+  <div class="kriteria_gra">
+    <?= $kriteria_vocabulary?>
+  </div>
+
+  <div class="kriteria_tips">
+    <?= $tips_3?>
   </div>
 </body>
 </html>

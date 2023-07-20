@@ -343,6 +343,7 @@
 ?>
 
 <?= $this->section('sesi-listening') ?>
+    <?php var_dump($jawaban_listening_reading);?>
     <?= $dataPeserta?>
 
     <center><h3>Listening</h3></center>

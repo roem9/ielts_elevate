@@ -18,43 +18,44 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 320px;
-    left: 690px;
-    width: 80px;
+    top: 160px;
+    left: 235px;
+    width: 500px;
     /* background-color: red; */
-    text-align: center;
   }
 
   .kriteria_ta {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    top: 274px;
-    left: 33px;
-    width: 620px;
-    height: 118px;
+    top: 303px;
+    left: 85px;
+    width: 623px;
+    height: 720px;
     /* background-color: red; */
+    line-height: 1.5;
   }
 
   .nilai_cc {
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 485px;
-    left: 690px;
-    width: 80px;
+    top: 160px;
+    /* left: 420px; + 250 */
+    left: 845px;
+    width: 500px;
     /* background-color: red; */
-    text-align: center;
   }
 
   .kriteria_cc {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 439px;
-    left: 33px;
-    width: 620px;
-    height: 118px;
+    top: 209px;
+    /* left: 43px; */
+    left: 575px;
+    width: 504px;
+    height: 145px;
     /* background-color: red; */
   }
 
@@ -62,21 +63,21 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 650px;
-    left: 690px;
-    width: 80px;
+    top: 390px;
+    /* left: 420px; + 250 */
+    left: 260px;
+    width: 500px;
     /* background-color: red; */
-    text-align: center;
   }
 
   .kriteria_lr {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 604px;
-    left: 33px;
-    width: 620px;
-    height: 118px;
+    top: 439px;
+    left: 43px;
+    width: 504px;
+    height: 145px;
     /* background-color: red; */
   }
 
@@ -84,32 +85,22 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 815px;
-    left: 690px;
-    width: 80px;
+    top: 390px;
+    /* left: 420px; + 250 */
+    left: 945px;
+    width: 500px;
     /* background-color: red; */
-    text-align: center;
   }
 
   .kriteria_gra {
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 769px;
-    left: 33px;
-    width: 620px;
-    height: 118px;
-    /* background-color: red; */
-  }
-
-  .kriteria_tips {
-    font-family: 'GothamBook';
-    font-size: 14px;
-    position: absolute;
-    top: 940px;
-    left: 23px;
-    width: 746px;
-    height: 118px;
+    top: 439px;
+    /* left: 43px; */
+    left: 575px;
+    width: 504px;
+    height: 145px;
     /* background-color: red; */
   }
 
@@ -135,43 +126,11 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="public/assets/sertifikat/feedback-writing-1.png" style="width: 210mm; height: 297mm; margin: 0;" />
+    <img src="public/assets/sertifikat/feedback-listening-reading.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
-
-  <div class="nilai_ta">
-    <b><?= $nilai_ta_1?></b>
-  </div>
-
+  
   <div class="kriteria_ta">
-    <?= $kriteria_ta_1?>
-  </div>
-
-  <div class="nilai_cc">
-    <b><?= $nilai_cc_1?></b>
-  </div>
-
-  <div class="kriteria_cc">
-    <?= $kriteria_cc_1?>
-  </div>
-
-  <div class="nilai_lr">
-    <b><?= $nilai_lr_1?></b>
-  </div>
-
-  <div class="kriteria_lr">
-    <?= $kriteria_lr_1?>
-  </div>
-
-  <div class="nilai_gra">
-    <b><?= $nilai_gra_1?></b>
-  </div>
-
-  <div class="kriteria_gra">
-    <?= $kriteria_gra_1?>
-  </div>
-
-  <div class="kriteria_tips">
-    <?= $tips_1?>
+    <?= $feedback_listening_reading?>
   </div>
 </body>
 </html>

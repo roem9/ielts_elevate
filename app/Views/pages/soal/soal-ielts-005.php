@@ -123,6 +123,7 @@
                 <b>G</b> accommodation available<br>
                 <b>H</b> local travel involved<br>
             </p>
+            <?php $choice = ["A", "B", "C", "D", "E", "F", "G", "H"];?>
             <p><b>Job opportunities</b></p>
             <p><b>15</b> Fresh food commercial manager <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++;?></p>
             <p><b>16</b> Agronomist <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++;?></p>

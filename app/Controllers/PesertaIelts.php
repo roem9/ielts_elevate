@@ -25,6 +25,7 @@ class PesertaIelts extends BaseController
         $data['title'] = 'Registrasi';
         return view('pages/registrasi', $data);
     }
+    
 
     public function prosesRegistrasi(){
         $db = db_connect();
@@ -400,7 +401,7 @@ class PesertaIelts extends BaseController
         $fontData = $defaultFontConfig['fontdata'];
 
         // Create an instance of the class:
-        $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L',
+        $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-P',
             'fontDir' => array_merge($fontDirs, [
                 __DIR__ . '/lucida-calligraphy-italic.ttf',
             ]),
@@ -417,6 +418,16 @@ class PesertaIelts extends BaseController
             ],
             'default_font' => 'Montserrat-SemiBold'
         ]);
+
+        $html = view('pages/feedback/feedback-cover', $data);
+        $mpdf->WriteHTML($html);
+
+        $mpdf->AddPage();
+
+        $html = view('pages/feedback/feedback-listening-reading', $data);
+        $mpdf->WriteHTML($html);
+
+        $mpdf->AddPage();
 
         $html = view('pages/feedback/feedback-writing-1', $data);
         $mpdf->WriteHTML($html);

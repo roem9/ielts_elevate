@@ -178,6 +178,10 @@
                     <label>Score LR (Lexical Resource)</label>
                     <input name="nilai_lr" class="multisteps-form__input form-control" type="text" placeholder="score task achievement">
                   </div>
+                  <div class="form-group">
+                    <label for="tips">Tips for futher improvement</label>
+                    <textarea name="tips" class="form-control" id="tips" rows="3"></textarea>
+                  </div>
                 </form>
               </div>
             </div>
@@ -253,6 +257,10 @@
                     <label>Score Pronunciation</label>
                     <input name="nilai_vocabulary" class="multisteps-form__input form-control" type="text" placeholder="score task achievement">
                   </div>
+                  <div class="form-group">
+                    <label for="tips_3">Tips for futher improvement</label>
+                    <textarea name="tips_3" class="form-control" id="tips_3" rows="3"></textarea>
+                  </div>
                 </form>
               </div>
             </div>
@@ -324,6 +332,8 @@
     CKEDITOR.replace('kriteria_grammar');
     CKEDITOR.replace('kriteria_vocabulary');
     CKEDITOR.replace('feedback_listening_reading');
+    CKEDITOR.replace('tips');
+    CKEDITOR.replace('tips_3');
 
     // $('html, .modal-body').animate({
     //     scrollTop: 0
@@ -658,6 +668,8 @@
             CKEDITOR.instances['kriteria_lr'].setData($obj.kriteria_lr_1);
             $(`#formFeedbackWriting [name='nilai_lr']`).val($obj.nilai_lr_1);
 
+            CKEDITOR.instances['tips'].setData($obj.tips_1);
+
             $(".kriteria_ta").html('Evaluation TA (Task Achievement)');
             $(".score_ta").html('Score TA (Task Achievement)');
           } else if(task == 2){
@@ -676,6 +688,8 @@
             $(`#formFeedbackWriting [name='nilai_gra']`).val($obj.nilai_gra_2);
             CKEDITOR.instances['kriteria_lr'].setData($obj.kriteria_lr_2);
             $(`#formFeedbackWriting [name='nilai_lr']`).val($obj.nilai_lr_2);
+
+            CKEDITOR.instances['tips'].setData($obj.tips_2);
 
             $(".kriteria_ta").html('Evaluation TR (Task Response)');
             $(".score_ta").html('Score TR (Task Response)');
@@ -724,6 +738,8 @@
           $(`#formFeedbackSpeaking [name='nilai_grammar']`).val($obj.nilai_grammar);
           CKEDITOR.instances['kriteria_vocabulary'].setData($obj.kriteria_vocabulary);
           $(`#formFeedbackSpeaking [name='nilai_vocabulary']`).val($obj.nilai_vocabulary);
+
+          CKEDITOR.instances['tips_3'].setData($obj.tips_3);
         }
       }
 
@@ -739,6 +755,7 @@
     let kriteria_cc = CKEDITOR.instances['kriteria_cc'].getData();
     let kriteria_gra = CKEDITOR.instances['kriteria_gra'].getData();
     let kriteria_lr = CKEDITOR.instances['kriteria_lr'].getData();
+    let tips = CKEDITOR.instances['tips'].getData();
     let nilai_ta = $(`#formFeedbackWriting [name='nilai_ta']`).val();
     let nilai_cc = $(`#formFeedbackWriting [name='nilai_cc']`).val();
     let nilai_gra = $(`#formFeedbackWriting [name='nilai_gra']`).val();
@@ -754,6 +771,7 @@
         kriteria_cc: kriteria_cc,
         kriteria_gra: kriteria_gra,
         kriteria_lr: kriteria_lr,
+        tips: tips,
         nilai_ta: nilai_ta,
         nilai_cc: nilai_cc,
         nilai_gra: nilai_gra,
@@ -793,6 +811,7 @@
     let kriteria_fluency = CKEDITOR.instances['kriteria_fluency'].getData();
     let kriteria_grammar = CKEDITOR.instances['kriteria_grammar'].getData();
     let kriteria_vocabulary = CKEDITOR.instances['kriteria_vocabulary'].getData();
+    let tips_3 = CKEDITOR.instances['tips_3'].getData();
     let nilai_topic = $(`#formFeedbackSpeaking [name='nilai_topic']`).val();
     let nilai_fluency = $(`#formFeedbackSpeaking [name='nilai_fluency']`).val();
     let nilai_grammar = $(`#formFeedbackSpeaking [name='nilai_grammar']`).val();
@@ -807,6 +826,7 @@
         kriteria_fluency: kriteria_fluency,
         kriteria_grammar: kriteria_grammar,
         kriteria_vocabulary: kriteria_vocabulary,
+        tips_3: tips_3,
         nilai_topic: nilai_topic,
         nilai_fluency: nilai_fluency,
         nilai_grammar: nilai_grammar,
