@@ -297,240 +297,180 @@ function writing(tipe_soal, task, url) {
         <p>Write at least 250 words</p>
       `;
     }
-  } else if (tipe_soal == "Soal_GT_002") {
-    if (task == 1) {
-      return `
-        <p class="question mb-3">
-          Writing Task 1
-        </p>
-        <p>You have a penfriend living in another country and he/she is curious to know about the major news items in your country.</p>
-        <p>Briefly describe ONE news story that has been on TV, onl the radio, or in the newspapers in your country, and explain why people are interested in it.</p>
-        <p>You should write at least 150 words.</p>
-        <p>You do NOT need to write your own address. Begin your letter as follows:</p>
-        <p>Dear _______,</p>
-      `;
-    } else if (task == 2) {
-      return `
-        <p class="question mb-3">
-          Writing Task 2
-        </p>
-        <p>As part of a class assignment you have to write about the following topic.</p>
-        <p>A healthy person is often described as someone who has a good diet, gets lots of exercise, and avoids stress.</p>
-        <p>What do people do to stay healthy in your country?</p>
-        <p>You should write at least 250 words.</p>
-      `;
-    }
   } else if (tipe_soal == "Soal_003") {
     if (task == 1) {
       return `
         <p class="question mb-3">
-          Writing Task 1
+            <b>Writing Task 1</b>
         </p>
-        <center><img src="${url}public/assets/img-soal/writing-003.png" alt="" class="img-fluid"></center>
 
-        <p><i>The diagrams show a structure that is used to generate electricity from wave power. Write a report for a university lecturer describing the information Write at least 150 words.</i></p>
-      `;
-    } else if (task == 2) {
-      return `
-      <p class="question mb-3">
-        Writing Task 2
-      </p>
-      <table class="tableSoal">
-          <tr>
-              <td class="text-wrap">
-                  Many museums and historical sites are mainly visited by tourists but not local people. Why is this the case and what can be done to attract more local people to visit these places?
-              </td>
-          </tr>
-      </table>
+        <p>You should spend about 20 minutes on this task.</p>
 
-      <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
-      <p>Write at least 250 words.</p>
-      `;
-    }
-  } else if (tipe_soal == "Soal_GT_003") {
-    if (task == 1) {
-      return `
-        <p class="question mb-3">
-          Writing Task 1
-        </p>
-        <table class="tableSoal">
+        <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    <p>Your neighbour keeps his/her animal in the garden. Write to him/her about it and the inconvenience it causes you and your family. In your </p>letter:
-                    <p>• tell them what the problem is</p>
-                    <p>• explain why it causes inconvenience</p>
-                    <p>• suggest a possible solution to it</p>
-                    <p>• say what actions you might take if the need arises.</p>
+                <td class="text-wrap p-3">
+                    <p>
+                        <b><i>The chart below gives information about how families in one country spent their weekly income in 1968 and in 2018.</i></b>
+                    </p>
+                    <p>
+                        <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
+                    </p>
                 </td>
             </tr>
         </table>
 
-        <p>You should write at least 150 words </p>
-        <p>You do NOT need to write any addresses </p>
-        <p>Begin your letter as follows:</p>
-        <p>Dear……….,</p>
+        <p>Write at least 150 words.</p>
+
+        <div class="">
+            <center>
+                <img src="${url}public/assets/img-soal/writing-1-soal-003.png" alt="" class="img-fluid">
+            </center>
+        </div>
       `;
     } else if (task == 2) {
       return `
         <p class="question mb-3">
-          Writing Task 2
+            <b>Writing Task 2</b>
         </p>
-        <table class="tableSoal">
+
+        <p>You should spend about 40 minutes on this task.</p>
+        <p>Write about the following topic:</p>
+
+        <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    In many countries, as people are earning more these days, they are also spending money in buying more and more items. Do you think it is positive or a negative development?
+                <td class="text-wrap p-3">
+                    <p>
+                        <i><b>Some people believe that professionals, such as doctors and engineers, should be required to work in the country where they did their training. Others believe they should be free to work in another country if they wish.</b></i>
+                    </p>
+                    <p>
+                        <i><b>Discuss both these views and give your own opinion.</b></i>
+                    </p>
                 </td>
             </tr>
         </table>
 
         <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
-        <p>Write at least 250 words.</p>
+        <p>Write at least 250 words</p>
       `;
     }
-  } else if (tipe_soal == "Soal_Academic_Post_Test") {
+  } else if (tipe_soal == "Soal_004") {
     if (task == 1) {
       return `
         <p class="question mb-3">
-          Writing Task 1
+            <b>Writing Task 1</b>
         </p>
-        <img src="${url}public/assets/img-soal/writing-academic-post-test-001.png" alt="" class="img-fluid">
-      `;
-    } else if (task == 2) {
-      return `
-        <p class="question mb-3">
-          Writing Task 2
-        </p>
-        <p>Write about the following topic:</p>
+
+        <p>You should spend about 20 minutes on this task.</p>
+
         <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    <i>
-                        Being a celebrity-such as a famous film star or sports personality-brings problems as well as benefits. <br>
-                        Do you think that being a celebrity brings more benefits or more problems?
-                    </i>
+                <td class="text-wrap p-3">
+                    <p>
+                        <b><i>The table and charts below give information on the police budget for 2017 and 2018 in one are of Britain. The table shows where the money came from and the charts show how it was distributed.</i></b>
+                    </p>
+                    <p>
+                        <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
+                    </p>
                 </td>
             </tr>
         </table>
 
-        <p>
-            Give reasons for your answer and include any relevant examples from your own knowledge or experience<br>
-            Write at least 250 words.
-        </p>
-      `;
-    }
-  } else if (tipe_soal == "Soal_Academic_Pretest") {
-    if (task == 1) {
-      return `
-        <p class="question mb-3">
-          Writing Task 1
-        </p>
-        <p><i>The graph below shows unemployment rates in the US and Japan from March 1993 to 1999. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></p>
         <p>Write at least 150 words.</p>
 
-        <img src="${url}public/assets/img-soal/writing-academic-pretest-001.jpg" alt="" class="img-fluid">
+        <div class="">
+            <center>
+                <img src="${url}public/assets/img-soal/writing-1-soal-004.png" alt="" class="img-fluid">
+            </center>
+        </div>
       `;
     } else if (task == 2) {
       return `
-      <p class="question mb-3">
-        Writing Task 2
-      </p>
-      <table class="tableSoal">
-          <tr>
-              <td class="text-wrap">
-                  Some people believe that living in big cities is becoming more difficult. Others believe that it is getting easier. Discuss both views and give your own opinion.
-              </td>
-          </tr>
-      </table>
-
-      <p>Write at least 250 words.</p>
-      `;
-    }
-  } else if (tipe_soal == "Soal_General_Post_Test") {
-    if (task == 1) {
-      return `
         <p class="question mb-3">
-          Writing Task 1
+            <b>Writing Task 2</b>
         </p>
+
+        <p>You should spend about 40 minutes on this task.</p>
         <p>Write about the following topic:</p>
+
         <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    <i>A friend has agreed to look after your house and pet while you are on holiday. Write a letter to your friend. In your letter:</i>
-                    <ul type="radio">
-                        <li>give contact details for when you are away</li>
-                        <li>give instructions about how to care for your pet</li>
-                        <li>describe other household duties</li>
-                    </ul>
+                <td class="text-wrap p-3">
+                    <p>
+                        <i>
+                            <b>
+                                Living in a country where you have to speak a foreign language can cause serious social problems, as well as practical problems
+                            </b>
+                        </i>
+                    </p>
+                    <p>
+                        <i>
+                            <b>
+                                To what extent do you agree or disagree with this statement?
+                            </b>
+                        </i>
+                    </p>
                 </td>
             </tr>
         </table>
 
-        <p>
-            Write at least 150 words. You do NOT need to write any addresses.<br>
-            Begin your letter as follows:<br>
-            Dear____________________________,
-        </p>
-      `;
-    } else if (task == 2) {
-      return `
-        <p class="question mb-3">
-          Writing Task 2
-        </p>
-        <table class="tableSoal w-100 mb-3">
-            <tr>
-                <td class="text-wrap">
-                    <i>
-                        Being a celebrity-such as a famous film star or sports personality-brings problems as well as benefits. <br>
-                        Do you think that being a celebrity brings more benefits or more problems?
-                    </i>
-                </td>
-            </tr>
-        </table>
-
-        <p>
-            Give reasons for your answer and include any relevant examples from your own knowledge or experience<br>
-            Write at least 250 words
-        </p>
+        <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p>Write at least 250 words</p>
       `;
     }
-  } else if (tipe_soal == "Soal_General_Pretest") {
+  } else if (tipe_soal == "Soal_005") {
     if (task == 1) {
       return `
         <p class="question mb-3">
-          Writing Task 1
+            <b>Writing Task 1</b>
         </p>
-        <table class="tableSoal">
+
+        <p>You should spend about 20 minutes on this task.</p>
+
+        <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    <i>
-                        You have a penfriend living in another country and he/she is curious to know about the major news items in your country.<br>
-                        Briefly describe ONE news story that has been on TV, on the TV radio, or in the newspapers in your country, and explain why people are interested in it. 
-                    </i>
+                <td class="text-wrap p-3">
+                    <p>
+                        <b><i>The charts below show the percentage of water used for different purposes in six areas of the world</i></b>
+                    </p>
+                    <p>
+                        <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
+                    </p>
                 </td>
             </tr>
         </table>
 
-        <p>
-            You should write at least 150 words.<br>
-            You do NOT need to write your own address. <br>
-            Begin your letter as follows:<br>
-            Dear, __________________________
-        </p>
+        <p>Write at least 150 words.</p>
+
+        <div class="">
+            <center>
+                <img src="${url}public/assets/img-soal/writing-1-soal-004.png" alt="" class="img-fluid">
+            </center>
+        </div>
       `;
     } else if (task == 2) {
       return `
         <p class="question mb-3">
-          Writing Task 2
+            <b>Writing Task 2</b>
         </p>
-        <table class="tableSoal">
+
+        <p>You should spend about 40 minutes on this task.</p>
+        <p>Write about the following topic:</p>
+
+        <table class="tableSoal w-100 mb-3">
             <tr>
-                <td class="text-wrap">
-                    <i>Some people believe that living in big cities is becoming more difficult. Others believe that it is getting easier. Discuss both views and give your own opinion.</i>
+                <td class="text-wrap p-3">
+                    <p>
+                        <i><b>Some people say that the only reason for learning a foreign language is in order to travel to or work in a foreign country. Others say that these are not the only reasons why someone should learn a foreign language</b></i>
+                    </p>
+                    <p>
+                        <i><b>Discuss both these views and give your own opinion.</b></i>
+                    </p>
                 </td>
             </tr>
         </table>
 
-        <p>Write at least 250 words.</p>
+        <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
+        <p>Write at least 250 words</p>
       `;
     }
   }

@@ -1,7 +1,351 @@
-<?= $this->extend('pages/soal/layout/soal_layout') ?>
+<?= $this->extend('pages/soal/layout/jawaban_layout') ?>
+
+<?php
+    $jawaban_listening_reading = [
+        [
+            "no" => 1,
+            "jawaban" => ["family"],
+        ],
+        [
+            "no" => 2,
+            "jawaban" => ["fit"],
+        ],
+        [
+            "no" => 3,
+            "jawaban" => ["hotels"],
+        ],
+        [
+            "no" => 4,
+            "jawaban" => ["Carrowniskey"],
+        ],
+        [
+            "no" => 5,
+            "jawaban" => ["week"],
+        ],
+        [
+            "no" => 6,
+            "jawaban" => ["bay"],
+        ],
+        [
+            "no" => 7,
+            "jawaban" => ["September"],
+        ],
+        [
+            "no" => 8,
+            "jawaban" => ["19", "nineteen"],
+        ],
+        [
+            "no" => 9,
+            "jawaban" => ["30", "thirty"],
+        ],
+        [
+            "no" => 10,
+            "jawaban" => ["boots"],
+        ],
+        [
+            "no" => 11,
+            "jawaban" => ["B", "E"],
+        ],
+        [
+            "no" => 12,
+            "jawaban" => ["E", "B"],
+        ],
+        [
+            "no" => 13,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 14,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 15,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 16,
+            "jawaban" => ["E"],
+        ],
+        [
+            "no" => 17,
+            "jawaban" => ["D"],
+        ],
+        [
+            "no" => 18,
+            "jawaban" => ["G"],
+        ],
+        [
+            "no" => 19,
+            "jawaban" => ["F"],
+        ],
+        [
+            "no" => 20,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 21,
+            "jawaban" => ["B"],
+        ],
+        [
+            "no" => 22,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 23,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 24,
+            "jawaban" => ["B"],
+        ],
+        [
+            "no" => 25,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 26,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 27,
+            "jawaban" => ["D"],
+        ],
+        [
+            "no" => 28,
+            "jawaban" => ["B"],
+        ],
+        [
+            "no" => 29,
+            "jawaban" => ["F"],
+        ],
+        [
+            "no" => 30,
+            "jawaban" => ["H"],
+        ],
+        [
+            "no" => 31,
+            "jawaban" => ["mud"],
+        ],
+        [
+            "no" => 32,
+            "jawaban" => ["feathers"],
+        ],
+        [
+            "no" => 33,
+            "jawaban" => ["shape"],
+        ],
+        [
+            "no" => 34,
+            "jawaban" => ["moon"],
+        ],
+        [
+            "no" => 35,
+            "jawaban" => ["neck"],
+        ],
+        [
+            "no" => 36,
+            "jawaban" => ["evidence"],
+        ],
+        [
+            "no" => 37,
+            "jawaban" => ["destinations"],
+        ],
+        [
+            "no" => 38,
+            "jawaban" => ["oceans"],
+        ],
+        [
+            "no" => 39,
+            "jawaban" => ["recovery"],
+        ],
+        [
+            "no" => 40,
+            "jawaban" => ["atlas"],
+        ],
+        [
+            "no" => 1,
+            "jawaban" => ["deer antlers"],
+        ],
+        [
+            "no" => 2,
+            "jawaban" => ["timber posts"],
+        ],
+        [
+            "no" => 3,
+            "jawaban" => ["tree trunks"],
+        ],
+        [
+            "no" => 4,
+            "jawaban" => ["oxen"],
+        ],
+        [
+            "no" => 5,
+            "jawaban" => ["glaciers"],
+        ],
+        [
+            "no" => 6,
+            "jawaban" => ["druids"],
+        ],
+        [
+            "no" => 7,
+            "jawaban" => ["burial"],
+        ],
+        [
+            "no" => 8,
+            "jawaban" => ["calendar"],
+        ],
+        [
+            "no" => 9,
+            "jawaban" => ["TRUE"],
+        ],
+        [
+            "no" => 10,
+            "jawaban" => ["FALSE"],
+        ],
+        [
+            "no" => 11,
+            "jawaban" => ["FALSE"],
+        ],
+        [
+            "no" => 12,
+            "jawaban" => ["TRUE"],
+        ],
+        [
+            "no" => 13,
+            "jawaban" => ["NOT GIVEN"],
+        ],
+        [
+            "no" => 14,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 15,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 16,
+            "jawaban" => ["B"],
+        ],
+        [
+            "no" => 17,
+            "jawaban" => ["D"],
+        ],
+        [
+            "no" => 18,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 19,
+            "jawaban" => ["D"],
+        ],
+        [
+            "no" => 20,
+            "jawaban" => ["YES"],
+        ],
+        [
+            "no" => 21,
+            "jawaban" => ["NOT GIVEN"],
+        ],
+        [
+            "no" => 22,
+            "jawaban" => ["NO"],
+        ],
+        [
+            "no" => 23,
+            "jawaban" => ["YES"],
+        ],
+        [
+            "no" => 24,
+            "jawaban" => ["C"],
+        ],
+        [
+            "no" => 25,
+            "jawaban" => ["A"],
+        ],
+        [
+            "no" => 26,
+            "jawaban" => ["E"],
+        ],
+        [
+            "no" => 27,
+            "jawaban" => ["NOT GIVEN"],
+        ],
+        [
+            "no" => 28,
+            "jawaban" => ["NOT GIVEN"],
+        ],
+        [
+            "no" => 29,
+            "jawaban" => ["TRUE"],
+        ],
+        [
+            "no" => 30,
+            "jawaban" => ["FALSE"],
+        ],
+        [
+            "no" => 31,
+            "jawaban" => ["TRUE"],
+        ],
+        [
+            "no" => 32,
+            "jawaban" => ["NOT GIVEN"],
+        ],
+        [
+            "no" => 33,
+            "jawaban" => ["FALSE"],
+        ],
+        [
+            "no" => 34,
+            "jawaban" => ["transport"],
+        ],
+        [
+            "no" => 35,
+            "jawaban" => ["staircases"],
+        ],
+        [
+            "no" => 36,
+            "jawaban" => ["engineering"],
+        ],
+        // tambahan
+        [
+            "no" => 37,
+            "jawaban" => ["rule"],
+        ],
+        [
+            "no" => 38,
+            "jawaban" => ["Roman"],
+        ],
+        [
+            "no" => 39,
+            "jawaban" => ["Paris"],
+        ],
+        [
+            "no" => 40,
+            "jawaban" => ["outwards"],
+        ],
+    ];
+
+    $i = 0;
+
+    $dataPeserta = "
+            <div class=\"shadow card mb-3\">
+            <div class=\"card-body ps-4\">
+                <p>Nama Peserta : $peserta[first_name] $peserta[last_name]</p>
+                <p>TTL : $peserta[t4_lahir], $peserta[tgl_lahir]</p>
+                <p>Email : $peserta[email]</p>
+                <p>Tipe Tes : $tes[tipe_tes]</p>
+                <p>Tipe Soal : $tes[tipe_soal]</p>
+                <p>Nilai Listening : $peserta[nilai_listening] (" . ielts_listening($peserta['nilai_listening']) . ")</p>
+                <p>Nilai Reading : $peserta[nilai_reading] (" . ielts_reading($peserta['nilai_reading'], $tes['tipe_tes']) . ")</p>
+            </div>
+        </div>
+    ";
+?>
 
 <?= $this->section('sesi-listening') ?>
-<?php $i = 0;?>
+    <?= $dataPeserta?>
+
+    <center><h3>Listening</h3></center>
     <div class="shadow card mb-3">
         <div class="card-body">
             <center>
@@ -27,19 +371,19 @@
                         <center><h6>Opportunities for voluntary work in Southoe village</h6></center>
                         <p><b>Library</b></p>
                         <ul>
-                            <li>Help with <b>1)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> books (times to be arranged)</li>
-                            <li>Help needed to keep <b>2)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> of books up to date</li>
-                            <li>Library is in the <b>3)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> Room in the village hall</li>
+                            <li>Help with <b>1)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> books (times to be arranged)</li>
+                            <li>Help needed to keep <b>2)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> of books up to date</li>
+                            <li>Library is in the <b>3)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> Room in the village hall</li>
                         </ul>
                         <p><b>Lunch club</b></p>
                         <ul>
-                            <li>Help by providing <b>4)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
-                            <li>Help with hobbies such as <b>5)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
+                            <li>Help by providing <b>4)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></li>
+                            <li>Help with hobbies such as <b>5)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></li>
                         </ul>
                         <p><b>Help for individuals needed next week</b></p>
                         <ul>
-                            <li>Taking Mrs Carroll to <b>6)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
-                            <li>Work in the <b>7)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> at Mr Selsbury's house</li>
+                            <li>Taking Mrs Carroll to <b>6)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></li>
+                            <li>Work in the <b>7)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> at Mr Selsbury's house</li>
                         </ul>
                     </td>
                 </tr>
@@ -62,7 +406,7 @@
                 </tr>
                 <tr>
                     <td class="ps-3 pe-3">19 Oct</td>
-                    <td class="ps-3 pe-3"><b>8)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></td>
+                    <td class="ps-3 pe-3"><b>8)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></td>
                     <td class="ps-3 pe-3">Village hall</td>
                     <td class="ps-3 pe-3">providing refreshments</td>
                 </tr>
@@ -70,16 +414,15 @@
                     <td class="ps-3 pe-3">18 Nov</td>
                     <td class="ps-3 pe-3">dance</td>
                     <td class="ps-3 pe-3">Village hall</td>
-                    <td class="ps-3 pe-3">checking <b>9)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></td>
+                    <td class="ps-3 pe-3">checking <b>9)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></td>
                 </tr>
                 <tr>
                     <td class="ps-3 pe-3">31 Dec</td>
                     <td class="ps-3 pe-3">New Year's Eve party</td>
                     <td class="ps-3 pe-3">Mountfort Hotel</td>
-                    <td class="ps-3 pe-3">designing the <b>10)</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></td>
+                    <td class="ps-3 pe-3">designing the <b>10)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></td>
                 </tr>
             </table>
-
         </div>
     </div>
 
@@ -102,7 +445,10 @@
                                 "<b>B</b> the house.",
                                 "<b>C</b> the farm."
                             ],
-                            "name" => "jawaban_listening[10]"
+                            "name" => "jawaban_listening[10]",
+                            "jawaban" => $listening_reading[$i][1],
+                            "status" => $listening_reading[$i][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i]['jawaban'])
                         ],
                         [
                             "no" => 12,
@@ -112,7 +458,10 @@
                                 "<b>B</b> a place to display his wealth.",
                                 "<b>C</b> a place for artists and writers."
                             ],
-                            "name" => "jawaban_listening[11]"
+                            "name" => "jawaban_listening[11]",
+                            "jawaban" => $listening_reading[$i + 1][1],
+                            "status" => $listening_reading[$i + 1][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 1]['jawaban'])
                         ],
                         [
                             "no" => 13,
@@ -122,7 +471,10 @@
                                 "<b>B</b> photographs.",
                                 "<b>C</b> people in costume."
                             ],
-                            "name" => "jawaban_listening[12]"
+                            "name" => "jawaban_listening[12]",
+                            "jawaban" => $listening_reading[$i + 2][1],
+                            "status" => $listening_reading[$i + 2][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 2]['jawaban'])
                         ],
                         [
                             "no" => 14,
@@ -132,13 +484,16 @@
                                 "<b>B</b> mini tractors",
                                 "<b>C</b> the adventure playground"
                             ],
-                            "name" => "jawaban_listening[13]"
+                            "name" => "jawaban_listening[13]",
+                            "jawaban" => $listening_reading[$i + 1][1],
+                            "status" => $listening_reading[$i + 1][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 1]['jawaban'])
                         ],
                     ];
                     ?>
 
                 <?php foreach ($data_soal_11_14 as $data_soal) :?>
-                    <?= soal_pg_ielts($data_soal)?>
+                    <?= jawaban_pg_ielts($data_soal)?>
                 <?php endforeach;?>
                 <?php $i = $i + COUNT($data_soal_11_14)?>
 
@@ -167,12 +522,12 @@
                 <?php $choice = ["A", "B", "C", "D", "E", "F", "G", "H"];?>
 
                 <p><b>Locations on the farm</b></p>
-                <p><b>15</b> dairy <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
-                <p><b>16</b> large barn <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
-                <p><b>17</b> small barn <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
-                <p><b>18</b> stables <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
-                <p><b>19</b> shed <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
-                <p><b>20</b> parkland <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "120"); $i++?></p>
+                <p><b>15</b> dairy <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>16</b> large barn <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>17</b> small barn <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>18</b> stables <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>19</b> shed <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>20</b> parkland <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
             </div>
         </div>
     </div>
@@ -194,8 +549,8 @@
                     <b>E</b> a reference to particular scenes
                 </p>
                 <?php $choice = ["A", "B", "C", "D", "E"]; ?>
-                <p><b>21</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
-                <p><b>22</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
+                <p><b>21</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>22</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
 
                 <p class="question">
                     <i><b>Questions 23-27</b></i><br>
@@ -220,11 +575,11 @@
                 </table>
                 <?php $choice = ["A", "B", "C", "D", "E", "F", "G"]; ?>
                 <p><b>Aspects of the production</b></p>
-                <p><b>23</b> The set <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
-                <p><b>24</b> The lighting <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
-                <p><b>25</b> The costume design <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
-                <p><b>26</b> The music <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
-                <p><b>27</b> The actors' delivery <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>
+                <p><b>23</b> The set <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>24</b> The lighting <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>25</b> The costume design <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>26</b> The music <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                <p><b>27</b> The actors' delivery <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
 
                 <p class="question">
                     <b>Questions 28-30</b><br>
@@ -241,7 +596,10 @@
                                 "<b>B</b> it deals with problems that families experience.",
                                 "<b>C</b> it teaches them about relationships."
                             ],
-                            "name" => "jawaban_listening[27]"
+                            "name" => "jawaban_listening[27]",
+                            "jawaban" => $listening_reading[$i][1],
+                            "status" => $listening_reading[$i][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i]['jawaban'])
                         ],
                         [
                             "no" => 29,
@@ -251,7 +609,10 @@
                                 "<b>B</b> demanding.",
                                 "<b>C</b> moving."
                             ],
-                            "name" => "jawaban_listening[28]"
+                            "name" => "jawaban_listening[28]",
+                            "jawaban" => $listening_reading[$i + 1][1],
+                            "status" => $listening_reading[$i + 1][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 1]['jawaban'])
                         ],
                         [
                             "no" => 30,
@@ -261,12 +622,15 @@
                                 "<b>B</b> There are recognisable characters.",
                                 "<b>C</b> They can be interpreted in many ways."
                             ],
-                            "name" => "jawaban_listening[29]"
+                            "name" => "jawaban_listening[29]",
+                            "jawaban" => $listening_reading[$i + 2][1],
+                            "status" => $listening_reading[$i + 2][2],
+                            "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 2]['jawaban'])
                         ],
                     ];
                     ?>
                     <?php foreach ($data_soal_28_30 as $data_soal) : ?>
-                        <?= soal_pg_ielts($data_soal) ?>
+                        <?= jawaban_pg_ielts($data_soal) ?>
                     <?php endforeach; ?>
                     <?php $i = $i + COUNT($data_soal_28_30)?>
                 </div>
@@ -290,28 +654,28 @@
                         <p><b><center>The impact of digital technology on the Icelandic language</center></b></p>
                         <p><b>The Icelandic language</b></p>
                         <ul>
-                            <li>has approximately <b>31</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> speakers</li>
-                            <li>has a <b>32</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> that is still growing</li>
+                            <li>has approximately <b>31</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> speakers</li>
+                            <li>has a <b>32</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> that is still growing</li>
                             <li>has not changed a lot over the last thousand years</li>
-                            <li>has its own words for computer-based concepts, such as web browser and <b>33</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
+                            <li>has its own words for computer-based concepts, such as web browser and <b>33</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></li>
                         </ul>
                         <p><b>Young speakers</b></p>
                         <ul>
-                            <li>are big users of digital technology, such as <b>34</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?></li>
-                            <li>are becoming <b>35</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> very quickly</li>
-                            <li>are having discussions using only English while they are in the <b>36</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> at school</li>
-                            <li>are better able to identify the content of a <b>37</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> in English than Icelandic</li>
+                            <li>are big users of digital technology, such as <b>34</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></li>
+                            <li>are becoming <b>35</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> very quickly</li>
+                            <li>are having discussions using only English while they are in the <b>36</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> at school</li>
+                            <li>are better able to identify the content of a <b>37</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> in English than Icelandic</li>
                         </ul>
                         <p><b>Technology and internet companies</b></p>
                         <ul>
-                            <li>write very little in Icelandic because of the small number of speakers and because of how complicated its <b>38</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> is</li>
+                            <li>write very little in Icelandic because of the small number of speakers and because of how complicated its <b>38</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> is</li>
                         </ul>
                         <p><b>The Icelandic government</b></p>
                         <ul>
                             <li>has set up a fund to support the production of more digital content in the language</li>
                             <li>believes that Icelandic has a secure future</li>
-                            <li>is worried that young Icelanders may lose their <b>39</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> as Icelanders</li>
-                            <li>is worried about the consequences of children not being <b>40</b> <?php echo soal_isian_ielts("jawaban_listening[$i]"); $i++?> in either Icelandic or English</li>
+                            <li>is worried that young Icelanders may lose their <b>39</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> as Icelanders</li>
+                            <li>is worried about the consequences of children not being <b>40</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> in either Icelandic or English</li>
                         </ul>
                     </td>
                 </tr>
@@ -321,7 +685,7 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('sesi-reading')?>
-    <?php $i = 0 ;?>
+    <?= $dataPeserta?>
     <?php
         $text = "
             <p class=\"question\">
@@ -378,6 +742,7 @@
     
     <div class="shadow card mb-3">
         <div class="card-body ps-4">
+            <h6><center>READING</center></h6>
             <div class="row">
                 <div class="col-7">
                     <div class="card">
@@ -398,10 +763,10 @@
 
                             <?php $choice = ["A", "B", "C", "D", "F", "G", "H"];?>
 
-                            <b>1</b> an explanation of the industrial processes that create potential raw materials for concrete <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <b>2</b> a reference to the various locations where high-rise wooden buildings can be found <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <b>3</b> an indication of how widely available the raw materials of concrete are <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <b>4</b> the belief that more high-rise wooden buildings are needed before wood can be regarded as a viable construction material <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
+                            <b>1</b> an explanation of the industrial processes that create potential raw materials for concrete <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <b>2</b> a reference to the various locations where high-rise wooden buildings can be found <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <b>3</b> an indication of how widely available the raw materials of concrete are <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <b>4</b> the belief that more high-rise wooden buildings are needed before wood can be regarded as a viable construction material <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
 
                             <p class="question">
                                 <b><i>Questions 5-8</i></b><br>
@@ -412,7 +777,7 @@
 
                             <h6><center>Making buildings with wood</center></h6>
                             <p>
-                                Wood is a traditional building material, but current environmental concerns are encouraging <?php echo "<b>" . $i + 1 . ")</b>" . soal_isian_ielts("jawaban_listening[$i]"); $i++?> to use wood in modern construction projects. Using wood, however, has its challenges. For example, as <?php echo "<b>" . $i + 1 . ")</b>" . soal_isian_ielts("jawaban_listening[$i]"); $i++?> in the atmosphere enters wood, it increases in size. In addition, wood is prone to pests and the risk of fire is greater. However, wood can be turned into a better construction material if it is treated and combined with other materials. In one process, <?php echo "<b>" . $i + 1 . ")</b>" . soal_isian_ielts("jawaban_listening[$i]"); $i++?> of solid wood are glued together to create building blocks. These blocks are lighter than concrete and steel but equal them in strength. Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the <?php echo "<b>" . $i + 1 . ")</b>" . soal_isian_ielts("jawaban_listening[$i]"); $i++?> with which they can be constructed and how much noise is generated by the process.
+                                Wood is a traditional building material, but current environmental concerns are encouraging <?php echo "<b>" . $i + 1 . ")</b>" . jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> to use wood in modern construction projects. Using wood, however, has its challenges. For example, as <?php echo "<b>" . $i + 1 . ")</b>" . jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> in the atmosphere enters wood, it increases in size. In addition, wood is prone to pests and the risk of fire is greater. However, wood can be turned into a better construction material if it is treated and combined with other materials. In one process, <?php echo "<b>" . $i + 1 . ")</b>" . jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> of solid wood are glued together to create building blocks. These blocks are lighter than concrete and steel but equal them in strength. Experts say that wooden buildings are an improvement on those made of concrete and steel in terms of the <?php echo "<b>" . $i + 1 . ")</b>" . jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> with which they can be constructed and how much noise is generated by the process.
                             </p>
 
                             <p class="question">
@@ -440,11 +805,11 @@
                             </table>
                             <?php $choice = ["A", "B", "C", "D"];?>
 
-                            <p><b>9</b> The environmental advantage of cement alternatives may not be as great as initially assumed. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>10</b> It would be hard to create a construction alternative to concrete that offers so many comparable benefits. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>11</b> Worries about the environment have led to increased interest in wood as a construction material. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>12</b> Expense has been a factor in the negative response to the development of new cements. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>13</b> The environmental damage caused by concrete is due to it being produced in large quantities. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
+                            <p><b>9</b> The environmental advantage of cement alternatives may not be as great as initially assumed. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>10</b> It would be hard to create a construction alternative to concrete that offers so many comparable benefits. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>11</b> Worries about the environment have led to increased interest in wood as a construction material. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>12</b> Expense has been a factor in the negative response to the development of new cements. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>13</b> The environmental damage caused by concrete is due to it being produced in large quantities. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
                         </div>
                     </div>
                 </div>
@@ -537,13 +902,13 @@
                                 </tr>
                             </table>
                             <?php $choice = ["i","ii","iii","iv","v","vi","vii","viii"];?>
-                            <p><b>14</b> Paragraph A <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>15</b> Paragraph B <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>16</b> Paragraph C <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>17</b> Paragraph D <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>18</b> Paragraph E <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>19</b> Paragraph F <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
-                            <p><b>20</b> Paragraph G <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
+                            <p><b>14</b> Paragraph A <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>15</b> Paragraph B <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>16</b> Paragraph C <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>17</b> Paragraph D <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>18</b> Paragraph E <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>19</b> Paragraph F <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>20</b> Paragraph G <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
 
                             <p class="question">
                                 <i><b>Questions 21-23</b></i><br>
@@ -563,6 +928,9 @@
                                             "<b>D</b> People found them hard to drive.",
                                         ],
                                         "name" => "jawaban_reading[20]",
+                                        "jawaban" => $listening_reading[$i][1],
+                                        "status" => $listening_reading[$i][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i]['jawaban'])
                                     ],
                                     [
                                         "no" => 22,
@@ -574,6 +942,9 @@
                                             "<b>D</b> sought the advice of experienced people in the car industry.",
                                         ],
                                         "name" => "jawaban_reading[21]",
+                                        "jawaban" => $listening_reading[$i + 1][1],
+                                        "status" => $listening_reading[$i + 1][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 1]['jawaban'])
                                     ],
                                     [
                                         "no" => 23,
@@ -585,12 +956,15 @@
                                             "<b>D</b> abandoned their earlier designs.",
                                         ],
                                         "name" => "jawaban_reading[22]",
+                                        "jawaban" => $listening_reading[$i + 2][1],
+                                        "status" => $listening_reading[$i + 2][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 2]['jawaban'])
                                     ],
                                 ];
                             ?>
 
                             <?php foreach ($data_soal_21_23 as $data_soal) : ?>
-                                <?= soal_pg_ielts($data_soal) ?>
+                                <?= jawaban_pg_ielts($data_soal) ?>
                             <?php endforeach; ?>
                             <?php $i = $i + COUNT($data_soal_21_23) ?>
 
@@ -605,9 +979,9 @@
 
                             <center><h6><b>The Model E</b></h6></center>
                             <p>
-                                The Model E was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its <b>24)</b> <?php echo soal_isian_ielts("jawaban_reading[$i]"); $i++?>, while keeping its emissions extremely low.
-                                The steam car was too expensive for many people and its design was constantly being altered. Under <b>25)</b> <?php echo soal_isian_ielts("jawaban_reading[$i]"); $i++?> cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California’s <b>26)</b> <?php echo soal_isian_ielts("jawaban_reading[$i]"); $i++?> emissions laws. Perhaps today’s technology and materials would help us revive the steam car.
-                                <!-- <p>Advertisements</p> -->
+                                The Model E was road-tested in 1924 by the Automobile Club of America. They found it easy to drive, despite its weight, and it impressed the spectators. A later version of the Model E raised its <b>24)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?>, while keeping its emissions extremely low.
+                                The steam car was too expensive for many people and its design was constantly being altered. Under <b>25)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> cars were produced before the company went out of business. However, even today, there are Model Es on the road in the US. They are straightforward to maintain, and they satisfy California’s <b>26)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> emissions laws. Perhaps today’s technology and materials would help us revive the steam car.
+                                <p>Advertisements</p>
                             </p>
                         </div>
                     </div>
@@ -654,12 +1028,13 @@
         </div>
     ";?>
 
-    <div class="card shadow mb-3">
+    <div class="shadow card mb-3">
         <div class="card-body ps-4">
             <div class="row">
                 <div class="col-7">
                     <div class="card">
                         <div class="card-body ps-4" style="height: 600px; overflow: scroll">
+
                             <?= $text?>
                         </div>
                     </div>
@@ -690,6 +1065,9 @@
                                             "<b>D</b> how weaker students can disrupt their classmates’ learning.",
                                         ],
                                         "name" => "jawaban_reading[26]",
+                                        "jawaban" => $listening_reading[$i][1],
+                                        "status" => $listening_reading[$i][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i]['jawaban'])
                                     ],
                                     [
                                         "no" => 28,
@@ -701,6 +1079,9 @@
                                             "<b>D</b> It works better in some schools than others.",
                                         ],
                                         "name" => "jawaban_reading[27]",
+                                        "jawaban" => $listening_reading[$i + 1][1],
+                                        "status" => $listening_reading[$i + 1][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 1]['jawaban'])
                                     ],
                                     [
                                         "no" => 29,
@@ -712,6 +1093,9 @@
                                             "<b>D</b> students not being aware of their limitations",
                                         ],
                                         "name" => "jawaban_reading[28]",
+                                        "jawaban" => $listening_reading[$i + 2][1],
+                                        "status" => $listening_reading[$i + 2][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 2]['jawaban'])
                                     ],
                                     [
                                         "no" => 30,
@@ -723,12 +1107,15 @@
                                             "<b>D</b> the setting of appropriate learning targets for a student’s aptitude",
                                         ],
                                         "name" => "jawaban_reading[29]",
+                                        "jawaban" => $listening_reading[$i + 3][1],
+                                        "status" => $listening_reading[$i + 3][2],
+                                        "jawaban_benar" => implode('/', $jawaban_listening_reading[$i + 3]['jawaban'])
                                     ],
                                 ];
                                 ?>
 
                                 <?php foreach ($data_soal_27_30 as $data_soal) : ?>
-                                    <?= soal_pg_ielts($data_soal) ?>
+                                    <?= jawaban_pg_ielts($data_soal) ?>
                                 <?php endforeach; ?>
                                 <?php $i = $i + COUNT($data_soal_27_30) ?>
 
@@ -758,7 +1145,7 @@
                             </table>
                             <center><h6>Is streaming effective?</h6></center>
                             <p>
-                                According to Professor John Hattie of the Melbourne Education Research Institute there is very little indication that streaming leads to <b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?> . He points out that, in schools which use streaming, the most significant impact is on those students placed in the <b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?>, especially where a large proportion of them have <b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?> . Meanwhile, for the <b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?>, there appears to be only minimal advantage. A further issue is that teachers tend to have <b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?> of students in streamed groups.
+                                According to Professor John Hattie of the Melbourne Education Research Institute there is very little indication that streaming leads to <b><?= $i + 1?>)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> . He points out that, in schools which use streaming, the most significant impact is on those students placed in the <b><?= $i + 1?>)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?>, especially where a large proportion of them have <b><?= $i + 1?>)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> . Meanwhile, for the <b><?= $i + 1?>)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?>, there appears to be only minimal advantage. A further issue is that teachers tend to have <b><?= $i + 1?>)</b> <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?> of students in streamed groups.
                             </p>
                             
                             <p class="question">
@@ -783,83 +1170,15 @@
 
                             <?php $choice = ["YES", "NO", "NOT GIVEN"];?>
 
-                            <p><b>36</b>The Vygotsky model of education supports the concept of a mixed-ability class. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
-                            <p><b>37</b>Some teachers are uncertain about allowing students to take on MKO roles in the classroom. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
-                            <p><b>38</b>It can be rewarding to teach knowledge which you have only recently acquired. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
-                            <p><b>39</b>The priority should be to ensure that the highest-achieving students attain their goals. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
-                            <p><b>40</b>Taking part in collaborative outdoor activities with teachers and classmates can improve student outcomes in the classroom. <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "120"); $i++?></p>
+                            <p><b>36</b> The Vygotsky model of education supports the concept of a mixed-ability class. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>37</b> Some teachers are uncertain about allowing students to take on MKO roles in the classroom. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>38</b> It can be rewarding to teach knowledge which you have only recently acquired. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>39</b> The priority should be to ensure that the highest-achieving students attain their goals. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
+                            <p><b>40</b> Taking part in collaborative outdoor activities with teachers and classmates can improve student outcomes in the classroom. <?php echo jawaban_ielts($listening_reading[$i][1], $listening_reading[$i][2], implode('/', $jawaban_listening_reading[$i]['jawaban'])); $i++?></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-<?= $this->endSection()?>
-
-<?= $this->section('sesi-writing')?>
-    <div class="card mb-3">
-        <div class="card-body">
-            <p class="question mb-3">
-                <b>Writing Task 1</b>
-            </p>
-
-            <p>You should spend about 20 minutes on this task.</p>
-
-            <table class="tableSoal w-100 mb-3">
-                <tr>
-                    <td class="text-wrap p-3">
-                        <p>
-                            <b><i>The chart below gives information about how families in one country spent their weekly income in 1968 and in 2018.</i></b>
-                        </p>
-                        <p>
-                            <b><i>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</i></b>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-
-            <p>Write at least 150 words.</p>
-
-            <div class="">
-                <center>
-                    <img src="<?= base_url()?>public/assets/img-soal/writing-1-soal-003.png" alt="" height="400px">
-                </center>
-            </div>
-
-            <p><span>Type your answer here</span></p>
-            <textarea id="textarea-1" class="form-control mb-3" name="text_writing[0]" data-bs-toggle="autosize" placeholder="" style="height: 300px;"></textarea>
-            <center>Total word Count : <span id="count-textarea-1">0</span></center>
-        </div>
-    </div>
-
-    <div class="card mb-3">
-        <div class="card-body">
-            <p class="question mb-3">
-                <b>Writing Task 2</b>
-            </p>
-
-            <p>You should spend about 40 minutes on this task.</p>
-            <p>Write about the following topic:</p>
-
-            <table class="tableSoal w-100 mb-3">
-                <tr>
-                    <td class="text-wrap p-3">
-                        <p>
-                            <i><b>Some people believe that professionals, such as doctors and engineers, should be required to work in the country where they did their training. Others believe they should be free to work in another country if they wish.</b></i>
-                        </p>
-                        <p>
-                            <i><b>Discuss both these views and give your own opinion.</b></i>
-                        </p>
-                    </td>
-                </tr>
-            </table>
-
-            <p>Give reasons for your answer and include any relevant examples from your own knowledge or experience.</p>
-            <p>Write at least 250 words</p>
-
-            <p><span>Type your answer here</span></p>
-            <textarea id="textarea-2" class="form-control mb-3" name="text_writing[1]" data-bs-toggle="autosize" placeholder="" style="height: 300px;"></textarea>
-            <center>Total word Count : <span id="count-textarea-2">0</span></center>
         </div>
     </div>
 <?= $this->endSection()?>

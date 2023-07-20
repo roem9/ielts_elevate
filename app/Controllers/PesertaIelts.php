@@ -178,6 +178,21 @@ class PesertaIelts extends BaseController
             $jawaban_ielts = $data_koreksi['jawaban_ielts'];
             $benar_listening = $data_koreksi['benar_listening'];
             $benar_reading = $data_koreksi['benar_reading'];
+        } else if($tes['tipe_soal'] == "Soal_003"){
+            $data_koreksi = soal_003($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
+            $jawaban_ielts = $data_koreksi['jawaban_ielts'];
+            $benar_listening = $data_koreksi['benar_listening'];
+            $benar_reading = $data_koreksi['benar_reading'];
+        } else if($tes['tipe_soal'] == "Soal_004"){
+            $data_koreksi = soal_004($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
+            $jawaban_ielts = $data_koreksi['jawaban_ielts'];
+            $benar_listening = $data_koreksi['benar_listening'];
+            $benar_reading = $data_koreksi['benar_reading'];
+        } else if($tes['tipe_soal'] == "Soal_005"){
+            $data_koreksi = soal_005($this->request->getPost('jawaban_listening'), $this->request->getPost('jawaban_reading'));
+            $jawaban_ielts = $data_koreksi['jawaban_ielts'];
+            $benar_listening = $data_koreksi['benar_listening'];
+            $benar_reading = $data_koreksi['benar_reading'];
         }
 
         $writing_text = $this->request->getPost("text_writing");

@@ -604,6 +604,12 @@ class Tes extends BaseController
             return view("pages/soal/jawaban-soal-ielts-001", $jawaban);
         } else if($tes['tipe_soal'] == "Soal_002"){
             return view("pages/soal/jawaban-soal-ielts-002", $jawaban);
+        } else if($tes['tipe_soal'] == "Soal_003"){
+            return view("pages/soal/jawaban-soal-ielts-003", $jawaban);
+        } else if($tes['tipe_soal'] == "Soal_004"){
+            return view("pages/soal/jawaban-soal-ielts-004", $jawaban);
+        } else if($tes['tipe_soal'] == "Soal_005"){
+            return view("pages/soal/jawaban-soal-ielts-005", $jawaban);
         }
     }
 }
