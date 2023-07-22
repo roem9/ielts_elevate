@@ -11,7 +11,7 @@
                           <a href="javascript:void()"><img src="<?= $logo?>" alt="" class="img-fluid" style="max-height: 60px"></a>
                       </div>
                       <div class="mb-2 mt-3">
-                      <h5 class="m-0 font-weight-bold text-dark">No. Sertifikat : </i>im.I.<?= $no_doc?><?= $hari?><?= $bulan?><?= $tahun?></h5><br>
+                      <h5 class="m-0 font-weight-bold text-dark">No. Sertifikat : </i>Elevate/IELTS/<?= $no_doc?></h5><br>
                       <p>
                           Nama : <?= $first_name?> <?= $last_name?>
                           <br>
