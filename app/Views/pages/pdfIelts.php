@@ -13,7 +13,7 @@
   .barcode {
     position: absolute;
     bottom: 30px;
-    right: 75px;
+    right: 245px;
     text-align: center;
   }
 
@@ -93,8 +93,8 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 20px;
     position: absolute;
-    bottom: 205px;
-    left: 135px;
+    bottom: 215px;
+    left: 245px;
     /* right: 0px; */
     text-align: center;
   }
