@@ -12,8 +12,9 @@
 
   .barcode {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    bottom: 30px;
+    right: 75px;
+    text-align: center;
   }
 
   .no_doc {
@@ -27,7 +28,7 @@
     font-family: 'lucida-calligraphy-italic';
     font-size: 40px;
     position: absolute;
-    top: 340px;
+    top: 260px;
     left: 0px;
     right: 0px;
     text-align: center;
@@ -35,56 +36,56 @@
 
   .nilai_listening {
     font-family: 'Montserrat-SemiBold';
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    bottom: 266px;
-    left: 167px;
+    bottom: 319px;
+    left: 199px;
     /* background-color: red; */
-    width: 75px;
+    width: 55px;
     text-align: center;
   }
 
   .nilai_reading {
     font-family: 'Montserrat-SemiBold';
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    bottom: 266px;
-    left: 379px;
+    bottom: 319px;
+    left: 399px;
     /* background-color: red; */
-    width: 75px;
+    width: 55px;
     text-align: center;
   }
 
   .nilai_writing {
     font-family: 'Montserrat-SemiBold';
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    bottom: 266px;
-    left: 591px;
+    bottom: 319px;
+    left: 595px;
     /* background-color: red; */
-    width: 75px;
+    width: 55px;
     text-align: center;
   }
 
   .nilai_speaking {
     font-family: 'Montserrat-SemiBold';
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    bottom: 266px;
-    left: 800px;
+    bottom: 319px;
+    left: 793px;
     /* background-color: red; */
-    width: 75px;
+    width: 55px;
     text-align: center;
   }
 
   .overall {
     font-family: 'Montserrat-SemiBold';
-    font-size: 24px;
+    font-size: 18px;
     position: absolute;
-    bottom: 266px;
-    left: 1012px;
+    bottom: 319px;
+    left: 985px;
     /* background-color: red; */
-    width: 75px;
+    width: 55px;
     text-align: center;
   }
 
@@ -93,8 +94,8 @@
     font-size: 20px;
     position: absolute;
     bottom: 205px;
-    left: 0px;
-    right: 0px;
+    left: 135px;
+    /* right: 0px; */
     text-align: center;
   }
 
@@ -102,16 +103,13 @@
 <body>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-      <!-- <img src="public/assets/sertifikat/sertifikat-ielts.png"
-          style="width: 210mm; height: 297mm; margin: 0;" /> -->
+      <img src="public/assets/sertifikat/sertifikat.png"
+          style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
 
   <div class="barcode">
-    <img src="<?= $barcode?>" alt="" width="100px">
-  </div>
-
-  <div class="no_doc">
-    im.I.<?= $no_doc?><?= $hari?><?= $bulan?><?= $tahun?>
+    <img src="<?= $barcode?>" alt="" width="150px"><br>
+    Elevate/IELTS/<?= $no_doc?>
   </div>
 
   <div class="nama">
@@ -147,7 +145,7 @@
   </div>
 
   <div class="tgl_tes">
-    <center>Jakarta, <?= date('d/m/y', strtotime($tgl_tes))?></center>
+    <center>Yogyakarta, <?= date('d/m/y', strtotime($tgl_tes))?></center>
   </div>
   
 </body>
