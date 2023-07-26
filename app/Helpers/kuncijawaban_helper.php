@@ -337,7 +337,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
-                $data_jawaban[$j] = $data_jawaban_listening;
+                // $data_jawaban[$j] = $data_jawaban_listening;
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
             }
 
             if($i == 15){
@@ -356,7 +357,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_listening = $benar_listening + $data_ielts['benar_listening'];
             } else if($i != 14 && $i != 16 && $i != 18) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
                 } else {
@@ -373,7 +375,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
-                $data_jawaban[$j] = $data_jawaban_reading;
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+                // $data_jawaban[$j] = $data_jawaban_reading;
             }
 
             if($i == 25){
@@ -382,7 +385,7 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_reading = $benar_reading + $data_ielts['benar_reading'];
             } else if($i != 24) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_reading++;
                 } else {
@@ -742,7 +745,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
-                $data_jawaban[$j] = $data_jawaban_listening;
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+                // $data_jawaban[$j] = $data_jawaban_listening;
             }
 
             if($i == 21){
@@ -756,7 +760,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_listening = $benar_listening + $data_ielts['benar_listening'];
             } else if($i != 20 && $i != 22) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
                 } else {
@@ -773,7 +778,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
-                $data_jawaban[$j] = $data_jawaban_reading;
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+                // $data_jawaban[$j] = $data_jawaban_reading;
             }
 
             if($i == 10){
@@ -787,7 +793,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_reading = $benar_reading + $data_ielts['benar_reading'];
             } else if($i != 9 && $i != 11) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_reading++;
                 } else {
@@ -934,7 +941,7 @@
             ],
             [
                 "no" => 31,
-                "jawaban" => ["321,000"],
+                "jawaban" => ["321,000", "321.000", "321000"],
             ],
             [
                 "no" => 32,
@@ -1145,7 +1152,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
-                $data_jawaban[$j] = $data_jawaban_listening;
+                // $data_jawaban[$j] = $data_jawaban_listening;
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
             }
 
             if($i == 21){
@@ -1154,7 +1162,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_listening = $benar_listening + $data_ielts['benar_listening'];
             } else if($i != 20) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
                 } else {
@@ -1171,10 +1180,12 @@
             $data_jawaban = [];
 
             foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
-                $data_jawaban[$j] = $data_jawaban_reading;
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+                // $data_jawaban[$j] = $data_jawaban_reading;
             }
 
-            if (in_array(trim($jawaban), $data_jawaban)){
+            // if (in_array(trim($jawaban), $data_jawaban)){
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                 $status = "Benar";
                 $benar_reading++;
             } else {
@@ -1360,15 +1371,14 @@
             ],
         ];
         
-
         $jawaban_reading = [
             [
                 "no" => 1,
-                "jawaban" => ["deer antlers"],
+                "jawaban" => ["deer antlers", "antlers"],
             ],
             [
                 "no" => 2,
-                "jawaban" => ["timber posts"],
+                "jawaban" => ["timber posts", "posts"],
             ],
             [
                 "no" => 3,
@@ -1532,7 +1542,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
-                $data_jawaban[$j] = $data_jawaban_listening;
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
+                // $data_jawaban[$j] = $data_jawaban_listening;
             }
 
             if($i == 11){
@@ -1541,7 +1552,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_listening = $benar_listening + $data_ielts['benar_listening'];
             } else if($i != 10) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
                 } else {
@@ -1558,10 +1570,12 @@
             $data_jawaban = [];
 
             foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
-                $data_jawaban[$j] = $data_jawaban_reading;
+                // $data_jawaban[$j] = $data_jawaban_reading;
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
             }
 
-            if (in_array(trim($jawaban), $data_jawaban)){
+            // if (in_array(trim($jawaban), $data_jawaban)){
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                 $status = "Benar";
                 $benar_reading++;
             } else {
@@ -1757,11 +1771,11 @@
             ],
             [
                 "no" => 2,
-                "jawaban" => ["1000kg", "1000 kilograms"],
+                "jawaban" => ["1000kg", "1000 kilograms", "1.000kg", "1.000 kilograms", "1,000kg", "1,000 kilograms", "1000 kg", "1000 kgs", "1.000 kg", "1.000 kgs", "1,000 kg", "1,000 kgs"],
             ],
             [
                 "no" => 3,
-                "jawaban" => ["food consumption"],
+                "jawaban" => ["food consumption", "consumption"],
             ],
             [
                 "no" => 4,
@@ -1921,7 +1935,8 @@
             $data_jawaban = [];
 
             foreach ($jawaban_listening[$i]['jawaban'] as $j => $data_jawaban_listening) {
-                $data_jawaban[$j] = $data_jawaban_listening;
+                // $data_jawaban[$j] = $data_jawaban_listening;
+                $data_jawaban[$j] = strtolower($data_jawaban_listening);
             }
 
             if($i == 11){
@@ -1945,7 +1960,8 @@
                 $jawaban_ielts .= $data_ielts['jawaban_ielts'];
                 $benar_listening = $benar_listening + $data_ielts['benar_listening'];
             } else if($i != 10 && $i != 12 && $i != 20 && $i != 22) {
-                if (in_array(trim($jawaban), $data_jawaban)){
+                // if (in_array(trim($jawaban), $data_jawaban)){
+                if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                     $status = "Benar";
                     $benar_listening++;
                 } else {
@@ -1962,10 +1978,11 @@
             $data_jawaban = [];
 
             foreach ($jawaban_reading[$i]['jawaban'] as $j => $data_jawaban_reading) {
-                $data_jawaban[$j] = $data_jawaban_reading;
+                $data_jawaban[$j] = strtolower($data_jawaban_reading);
+                // $data_jawaban[$j] = $data_jawaban_reading;
             }
 
-            if (in_array(trim($jawaban), $data_jawaban)){
+            if (in_array(trim(strtolower($jawaban)), $data_jawaban)){
                 $status = "Benar";
                 $benar_reading++;
             } else {
@@ -1988,22 +2005,22 @@
 
     function dua_nomor_tidak_boleh_sama_listening($jawaban_no_awal, $jawaban_no_akhir, $kunci_no_awal, $kunci_no_akhir){
         $benar_listening = 0;
-        if($jawaban_no_awal == $kunci_no_awal && $jawaban_no_akhir == $kunci_no_akhir){
+        if(strtolower($jawaban_no_awal) == strtolower($kunci_no_awal) && strtolower($jawaban_no_akhir) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_listening = $benar_listening + 2;
-        } else if($jawaban_no_awal == $kunci_no_akhir && $jawaban_no_akhir == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_akhir) && strtolower($jawaban_no_akhir) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_listening = $benar_listening + 2;
-        } else if($jawaban_no_awal == $kunci_no_akhir){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
             $benar_listening++;
-        } else if($jawaban_no_awal == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Listening&&&' . $jawaban_no_awal . '&&&Benar|||Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
             $benar_listening++;
-        } else if($jawaban_no_akhir == $kunci_no_akhir){
+        } else if(strtolower($jawaban_no_akhir) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_listening++;
-        } else if($jawaban_no_akhir == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_akhir) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Listening&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Listening&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_listening++;
         } else {
@@ -2020,22 +2037,22 @@
 
     function dua_nomor_tidak_boleh_sama_reading($jawaban_no_awal, $jawaban_no_akhir, $kunci_no_awal, $kunci_no_akhir){
         $benar_reading = 0;
-        if($jawaban_no_awal == $kunci_no_awal && $jawaban_no_akhir == $kunci_no_akhir){
+        if(strtolower($jawaban_no_awal) == strtolower($kunci_no_awal) && strtolower($jawaban_no_akhir) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_reading = $benar_reading + 2;
-        } else if($jawaban_no_awal == $kunci_no_akhir && $jawaban_no_akhir == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_akhir) && strtolower($jawaban_no_akhir) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_reading = $benar_reading + 2;
-        } else if($jawaban_no_awal == $kunci_no_akhir){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
             $benar_reading++;
-        } else if($jawaban_no_awal == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_awal) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Reading&&&' . $jawaban_no_awal . '&&&Benar|||Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_akhir)).'&&&Salah|||';
             $benar_reading++;
-        } else if($jawaban_no_akhir == $kunci_no_akhir){
+        } else if(strtolower($jawaban_no_akhir) == strtolower($kunci_no_akhir)){
             $jawaban_ielts = 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_reading++;
-        } else if($jawaban_no_akhir == $kunci_no_awal){
+        } else if(strtolower($jawaban_no_akhir) == strtolower($kunci_no_awal)){
             $jawaban_ielts = 'Reading&&&'.trim(str_replace('"', "&quot;", $jawaban_no_awal)).'&&&Salah|||Reading&&&' . $jawaban_no_akhir . '&&&Benar|||';
             $benar_reading++;
         } else {
