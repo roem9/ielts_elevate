@@ -328,7 +328,8 @@
         this.style.width = (this.scrollWidth + 5) + 'px';
     });
 
-    $(".btnTransisiSatu").click(function(){
+    // $(".btnTransisiSatu").click(function(){
+    $(document).on("click", ".btnTransisiSatu", function(){
         var first_name = $("[name='first_name']").val();
         var last_name = $("[name='last_name']").val();
         var email = $("[name='email']").val();
@@ -382,7 +383,8 @@
 
     })
 
-    $(".btnTransisiDua").click(function(){
+    // $(".btnTransisiDua").click(function(){
+    $(document).on("click", ".btnTransisiDua", function(){
         Swal.fire({
             icon: 'question',
             html: 'Once you close, you cannot open the previous section',
@@ -414,7 +416,8 @@
         })
     })
 
-    $(".btnTransisiTiga").click(function(){
+    // $(".btnTransisiTiga").click(function(){
+    $(document).on("click", ".btnTransisiTiga", function(){
         Swal.fire({
             icon: 'question',
             html: 'Once you close, you cannot open the previous section',
@@ -557,7 +560,8 @@
         })
     })
 
-    $(".btnSimpan").click(function(){
+    // $(".btnSimpan").click(function(){
+    $(document).on("click", ".btnSimpan", function(){
         Swal.fire({
             icon: 'question',
             html: 'Finish the test?',
