@@ -106,9 +106,9 @@
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 940px;
-    left: 23px;
-    width: 746px;
+    top: 948px;
+    left: 33px;
+    width: 736px;
     height: 118px;
     /* background-color: red; */
   }
@@ -171,7 +171,10 @@
   </div>
 
   <div class="kriteria_tips">
-    <?= $tips_1?>
+    <?= 
+      // $tips_1
+      $writing_1
+    ?>
   </div>
 </body>
 </html>

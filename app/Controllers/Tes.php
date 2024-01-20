@@ -195,13 +195,13 @@ class Tes extends BaseController
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'tips' => [
-                'label' => 'Tips for further improvement',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ],
+            // 'tips' => [
+            //     'label' => 'Tips for further improvement',
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => '{field} harus diisi'
+            //     ]
+            // ],
         ];
 
         $validasi->setRules($aturan);
@@ -216,7 +216,7 @@ class Tes extends BaseController
             $nilai_gra = $this->request->getPost('nilai_gra');
             $kriteria_lr = $this->request->getPost('kriteria_lr');
             $nilai_lr = $this->request->getPost('nilai_lr');
-            $tips = $this->request->getPost('tips');
+            // $tips = $this->request->getPost('tips');
 
             
             if($task == 1){
@@ -229,7 +229,7 @@ class Tes extends BaseController
                     'nilai_gra_1' => $nilai_gra,
                     'kriteria_lr_1' => $kriteria_lr,
                     'nilai_lr_1' => $nilai_lr,
-                    'tips_1' => $tips
+                    // 'tips_1' => $tips
                 ];
             } else if($task == 2){
                 $data = [
@@ -241,7 +241,7 @@ class Tes extends BaseController
                     'nilai_gra_2' => $nilai_gra,
                     'kriteria_lr_2' => $kriteria_lr,
                     'nilai_lr_2' => $nilai_lr,
-                    'tips_2' => $tips
+                    // 'tips_2' => $tips
                 ];
             }
 

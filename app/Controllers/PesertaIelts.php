@@ -371,6 +371,11 @@ class PesertaIelts extends BaseController
         $db = db_connect();
         $data = $db->query("SELECT * FROM peserta_ielts as a JOIN tes as b ON a.id_tes = b.id_tes JOIN client as c ON b.fk_id_client = c.id_client WHERE md5(id) = '$id_peserta'")->getRowArray();
 
+        $text_writing = explode("|||", $data['text_writing']);
+
+        $data['writing_1'] = $text_writing[0];
+        $data['writing_2'] = $text_writing[1];
+
         $data['no_doc'] = no_doc($data['no_doc']);
         $data['hari'] = date('d', strtotime($data['tgl_tes']));
         $data['tahun'] = date('y', strtotime($data['tgl_tes']));

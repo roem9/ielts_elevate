@@ -175,7 +175,8 @@ function pembulatan_skor_ielts(angka) {
   if (decimal <= 0.25) {
     // jika desimal < 0.25
     return Math.floor(angka); // bulatkan ke bawah menjadi 0
-  } else if (decimal > 0.25 && decimal <= 0.75) {
+    // } else if (decimal > 0.25 && decimal <= 0.75) {
+  } else if (decimal > 0.25 && decimal < 0.75) {
     // jika desimal >= 0.25 dan < 0.75
     return Math.floor(angka) + 0.5; // bulatkan menjadi 0.5
   } else {
