@@ -340,11 +340,11 @@ function list_soal_toefl()
     function pembulatan_skor_ielts($angka) {
         $decimal = $angka - floor($angka); // hitung nilai desimal
       
-        if ($decimal <= 0.25) {
+        if ($decimal < 0.25) {
           // jika desimal < 0.25
           return floor($angka); // bulatkan ke bawah menjadi 0
         // } else if ($decimal > 0.25 && $decimal <= 0.75) {
-        } else if ($decimal > 0.25 && $decimal < 0.75) {
+        } else if ($decimal >= 0.25 && $decimal < 0.75) {
           // jika desimal >= 0.25 dan < 0.75
           return floor($angka) + 0.5; // bulatkan menjadi 0.5
         } else {

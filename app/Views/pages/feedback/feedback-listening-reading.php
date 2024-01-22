@@ -31,7 +31,7 @@
     top: 303px;
     left: 85px;
     width: 623px;
-    height: 720px;
+    height: 323px;
     /* background-color: red; */
     line-height: 1.5;
   }
@@ -49,13 +49,14 @@
 
   .kriteria_cc {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    top: 209px;
+    top: 713px;
     /* left: 43px; */
-    left: 575px;
-    width: 504px;
-    height: 145px;
+    left: 85px;
+    width: 623px;
+    /* height: 145px; */
+    height: 323px;
     /* background-color: red; */
   }
 
@@ -130,7 +131,11 @@
   </div>
   
   <div class="kriteria_ta">
-    <?= $feedback_listening_reading?>
+    <?= $writing_1?>
+  </div>
+
+  <div class="kriteria_cc">
+    <?= $writing_2?>
   </div>
 </body>
 </html>

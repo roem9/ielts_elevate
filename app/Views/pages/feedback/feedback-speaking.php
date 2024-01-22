@@ -29,10 +29,12 @@
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 274px;
+    /* top: 274px; */
+    top: 259px;
     left: 33px;
     width: 620px;
-    height: 118px;
+    /* height: 118px; */
+    height: 160px;
     /* background-color: red; */
   }
 
@@ -40,7 +42,7 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 485px;
+    top: 538px;
     left: 690px;
     width: 80px;
     /* background-color: red; */
@@ -51,10 +53,12 @@
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 439px;
+    /* top: 439px; */
+    top: 476px;
     left: 33px;
     width: 620px;
-    height: 118px;
+    /* height: 118px; */
+    height: 160px;
     /* background-color: red; */
   }
 
@@ -62,7 +66,7 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 650px;
+    top: 760px;
     left: 690px;
     width: 80px;
     /* background-color: red; */
@@ -73,10 +77,12 @@
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 604px;
+    /* top: 604px; */
+    top: 699px;
     left: 33px;
     width: 620px;
-    height: 118px;
+    /* height: 118px; */
+    height: 160px;
     /* background-color: red; */
   }
 
@@ -84,7 +90,7 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 815px;
+    top: 985px;
     left: 690px;
     width: 80px;
     /* background-color: red; */
@@ -95,21 +101,12 @@
     font-family: 'GothamBook';
     font-size: 14px;
     position: absolute;
-    top: 769px;
+    /* top: 769px; */
+    top: 922px;
     left: 33px;
     width: 620px;
-    height: 118px;
-    /* background-color: red; */
-  }
-
-  .kriteria_tips {
-    font-family: 'GothamBook';
-    font-size: 14px;
-    position: absolute;
-    top: 940px;
-    left: 23px;
-    width: 746px;
-    height: 118px;
+    /* height: 118px; */
+    height: 160px;
     /* background-color: red; */
   }
 
@@ -177,10 +174,6 @@
 
   <div class="kriteria_gra">
     <?= $kriteria_vocabulary?>
-  </div>
-
-  <div class="kriteria_tips">
-    <?= $tips_3?>
   </div>
 </body>
 </html>

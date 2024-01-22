@@ -322,13 +322,13 @@ class Tes extends BaseController
                     'required' => '{field} harus diisi'
                 ]
             ],
-            'tips_3' => [
-                'label' => 'Tips for further improvement',
-                'rules' => 'required',
-                'errors' => [
-                    'required' => '{field} harus diisi'
-                ]
-            ]
+            // 'tips_3' => [
+            //     'label' => 'Tips for further improvement',
+            //     'rules' => 'required',
+            //     'errors' => [
+            //         'required' => '{field} harus diisi'
+            //     ]
+            // ]
         ];
 
         $validasi->setRules($aturan);
@@ -342,7 +342,7 @@ class Tes extends BaseController
             $nilai_grammar = $this->request->getPost('nilai_grammar');
             $kriteria_vocabulary = $this->request->getPost('kriteria_vocabulary');
             $nilai_vocabulary = $this->request->getPost('nilai_vocabulary');
-            $tips_3 = $this->request->getPost('tips_3');
+            // $tips_3 = $this->request->getPost('tips_3');
             
             $data = [
                 'kriteria_topic' => $kriteria_topic,
@@ -353,7 +353,7 @@ class Tes extends BaseController
                 'nilai_grammar' => $nilai_grammar,
                 'kriteria_vocabulary' => $kriteria_vocabulary,
                 'nilai_vocabulary' => $nilai_vocabulary,
-                'tips_3' => $tips_3
+                // 'tips_3' => $tips_3
             ];
 
             $model = new PesertaIeltsModel();

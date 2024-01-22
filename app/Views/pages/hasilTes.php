@@ -29,7 +29,7 @@
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder desktop">S</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder desktop">OVERALL</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder all">Action</th>
-                  <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FL&R</th>
+                  <!-- <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FL&R</th> -->
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FW 1</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FW 2</th>
                   <th class="text-uppercase text-dark text-xxs font-weight-bolder none">FS</th>
@@ -257,10 +257,10 @@
                     <label>Score Pronunciation</label>
                     <input name="nilai_vocabulary" class="multisteps-form__input form-control" type="text" placeholder="score task achievement">
                   </div>
-                  <div class="form-group">
+                  <!-- <div class="form-group">
                     <label for="tips_3">Tips for futher improvement</label>
                     <textarea name="tips_3" class="form-control" id="tips_3" rows="3"></textarea>
-                  </div>
+                  </div> -->
                 </form>
               </div>
             </div>
@@ -457,19 +457,19 @@
               `;
           }
         },
-        {
-          data: null,
-          className: 'text-xs w-1',
-          render: function(data, type, row) {
-            return `
-            <a href="javascript:void(0)" onclick="feedbackListeningReading('${row.id_peserta}')" class="me-1">
-                <span class="badge bg-gradient-info">
-                  Feedback Listening & Reading
-                </span>
-              </a>
-              `;
-          }
-        },
+        // {
+        //   data: null,
+        //   className: 'text-xs w-1',
+        //   render: function(data, type, row) {
+        //     return `
+        //     <a href="javascript:void(0)" onclick="feedbackListeningReading('${row.id_peserta}')" class="me-1">
+        //         <span class="badge bg-gradient-info">
+        //           Feedback Listening & Reading
+        //         </span>
+        //       </a>
+        //       `;
+        //   }
+        // },
         {
           data: null,
           className: 'text-xs w-1',
@@ -739,7 +739,7 @@
           CKEDITOR.instances['kriteria_vocabulary'].setData($obj.kriteria_vocabulary);
           $(`#formFeedbackSpeaking [name='nilai_vocabulary']`).val($obj.nilai_vocabulary);
 
-          CKEDITOR.instances['tips_3'].setData($obj.tips_3);
+          // CKEDITOR.instances['tips_3'].setData($obj.tips_3);
         }
       }
 
@@ -811,7 +811,7 @@
     let kriteria_fluency = CKEDITOR.instances['kriteria_fluency'].getData();
     let kriteria_grammar = CKEDITOR.instances['kriteria_grammar'].getData();
     let kriteria_vocabulary = CKEDITOR.instances['kriteria_vocabulary'].getData();
-    let tips_3 = CKEDITOR.instances['tips_3'].getData();
+    // let tips_3 = CKEDITOR.instances['tips_3'].getData();
     let nilai_topic = $(`#formFeedbackSpeaking [name='nilai_topic']`).val();
     let nilai_fluency = $(`#formFeedbackSpeaking [name='nilai_fluency']`).val();
     let nilai_grammar = $(`#formFeedbackSpeaking [name='nilai_grammar']`).val();
@@ -826,7 +826,7 @@
         kriteria_fluency: kriteria_fluency,
         kriteria_grammar: kriteria_grammar,
         kriteria_vocabulary: kriteria_vocabulary,
-        tips_3: tips_3,
+        // tips_3: tips_3,
         nilai_topic: nilai_topic,
         nilai_fluency: nilai_fluency,
         nilai_grammar: nilai_grammar,
