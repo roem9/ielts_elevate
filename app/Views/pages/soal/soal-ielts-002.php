@@ -162,11 +162,11 @@
                     Which <b>TWO</b> things do the students think are necessary for successful bike-sharing schemes?<br>
                 </p>
                 <p>
-                    <b>A</b>   reducing noise pollution<br>
-                    <b>B</b>   reducing traffic congestion<br>
-                    <b>C</b>   improving air quality<br>
-                    <b>D</b>   encouraging health and fitness<br>
-                    <b>E</b>   making cycling affordable
+                    <b>A</b>   Bikes should have a GPS system.<br>
+                    <b>B</b>   The app should be easy to use.<br>
+                    <b>C</b>   Public awareness should be raised.<br>
+                    <b>D</b>   Only one scheme should be available.<br>
+                    <b>E</b>   There should be a large network of cycle lanes.
                 </p>
                 <?php $choice = ["A", "B", "C", "D", "E"];?>
                 <p><b><?= $i + 1?>)</b> <?php echo soal_select_ielts("jawaban_listening[$i]", $choice, "80"); $i++?></p>

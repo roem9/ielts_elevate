@@ -396,7 +396,7 @@
                                 <i>Write the correct letter, <b>A-H</b>, in boxes 1-4 on your answer sheet.</i>
                             </p>
 
-                            <?php $choice = ["A", "B", "C", "D", "F", "G", "H"];?>
+                            <?php $choice = ["A", "B", "C", "D", "E", "F", "G", "H"];?>
 
                             <b>1</b> an explanation of the industrial processes that create potential raw materials for concrete <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>
                             <b>2</b> a reference to the various locations where high-rise wooden buildings can be found <?php echo soal_select_ielts("jawaban_reading[$i]", $choice, "80"); $i++?></p>

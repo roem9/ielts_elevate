@@ -444,7 +444,7 @@ function writing(tipe_soal, task, url) {
 
         <div class="">
             <center>
-                <img src="${url}public/assets/img-soal/writing-1-soal-004.png" alt="" class="img-fluid">
+                <img src="${url}public/assets/img-soal/writing-1-soal-005.png" alt="" class="img-fluid">
             </center>
         </div>
       `;
