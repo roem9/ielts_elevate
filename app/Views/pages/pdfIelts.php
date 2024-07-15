@@ -12,8 +12,8 @@
 
   .barcode {
     position: absolute;
-    bottom: 30px;
-    right: 245px;
+    bottom: 100px;
+    right: 445px;
     text-align: center;
   }
 
@@ -26,75 +26,75 @@
 
   .nama {
     font-family: 'lucida-calligraphy-italic';
-    font-size: 40px;
+    font-size: 50px;
     position: absolute;
-    top: 260px;
-    left: 0px;
+    top: 250px;
+    left: 25px;
     right: 0px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .nilai_listening {
     font-family: 'Montserrat-SemiBold';
     font-size: 18px;
     position: absolute;
-    bottom: 319px;
-    left: 199px;
+    bottom: 299px;
+    left: 139px;
     /* background-color: red; */
     width: 55px;
-    text-align: center;
+    text-align: right;
   }
 
   .nilai_reading {
     font-family: 'Montserrat-SemiBold';
     font-size: 18px;
-    position: absolute;
-    bottom: 319px;
-    left: 399px;
+    bottom: 299px;
+    left: 338px;
     /* background-color: red; */
     width: 55px;
-    text-align: center;
+    position: absolute;
+    text-align: right;
   }
 
   .nilai_writing {
     font-family: 'Montserrat-SemiBold';
     font-size: 18px;
     position: absolute;
-    bottom: 319px;
-    left: 595px;
+    bottom: 205px;
+    left: 139px;
     /* background-color: red; */
     width: 55px;
-    text-align: center;
+    text-align: right;
   }
 
   .nilai_speaking {
     font-family: 'Montserrat-SemiBold';
     font-size: 18px;
     position: absolute;
-    bottom: 319px;
-    left: 793px;
+    bottom: 205px;
+    left: 338px;
     /* background-color: red; */
     width: 55px;
-    text-align: center;
+    text-align: right;
   }
 
   .overall {
     font-family: 'Montserrat-SemiBold';
     font-size: 18px;
     position: absolute;
-    bottom: 319px;
-    left: 985px;
+    bottom: 105px;
+    left: 312px;
     /* background-color: red; */
     width: 55px;
-    text-align: center;
+    text-align: right;
   }
 
   .tgl_tes {
     font-family: 'Montserrat-SemiBold';
     font-size: 20px;
     position: absolute;
-    bottom: 215px;
-    left: 245px;
+    bottom: 335px;
+    left: 840px;
     /* right: 0px; */
     text-align: center;
   }

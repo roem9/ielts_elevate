@@ -272,7 +272,8 @@ class PesertaIelts extends BaseController
             ->setSize(300)
             ->setMargin(10)
             ->setRoundBlockSizeMode(new RoundBlockSizeModeMargin())
-            ->setForegroundColor(new Color(0, 0, 0));
+            ->setForegroundColor(new Color(0, 0, 0))
+            ->setBackgroundColor(new Color(255, 255, 255, 127));
 
         // Create generic logo
         $logo = Logo::create( FCPATH .'/public/assets/logo-client/'.$data['logo'])
@@ -406,7 +407,7 @@ class PesertaIelts extends BaseController
         $fontData = $defaultFontConfig['fontdata'];
 
         // Create an instance of the class:
-        $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-P',
+        $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L',
             'fontDir' => array_merge($fontDirs, [
                 __DIR__ . '/lucida-calligraphy-italic.ttf',
             ]),
@@ -434,17 +435,32 @@ class PesertaIelts extends BaseController
 
         $mpdf->AddPage();
 
-        $html = view('pages/feedback/feedback-writing-1', $data);
+        $html = view('pages/feedback/feedback-writing-11', $data);
         $mpdf->WriteHTML($html);
 
         $mpdf->AddPage();
 
-        $html = view('pages/feedback/feedback-writing-2', $data);
+        $html = view('pages/feedback/feedback-writing-12', $data);
         $mpdf->WriteHTML($html);
 
         $mpdf->AddPage();
 
-        $html = view('pages/feedback/feedback-speaking', $data);
+        $html = view('pages/feedback/feedback-writing-21', $data);
+        $mpdf->WriteHTML($html);
+
+        $mpdf->AddPage();
+
+        $html = view('pages/feedback/feedback-writing-22', $data);
+        $mpdf->WriteHTML($html);
+
+        $mpdf->AddPage();
+
+        $html = view('pages/feedback/feedback-speaking-1', $data);
+        $mpdf->WriteHTML($html);
+
+        $mpdf->AddPage();
+
+        $html = view('pages/feedback/feedback-speaking-2', $data);
         $mpdf->WriteHTML($html);
 
         // $mpdf->Output();

@@ -66,60 +66,49 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 760px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 33px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_lr {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 604px; */
-    top: 699px;
+    top: 223px;
     left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .nilai_gra {
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 985px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 579px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_gra {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 769px; */
-    top: 922px;
-    left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    top: 223px;
+    left: 579px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
-
-  /* .kriteria_tips {
-    font-family: 'GothamBook';
-    font-size: 14px;
-    position: absolute;
-    top: 948px;
-    left: 33px;
-    width: 736px;
-    height: 118px;
-    /* background-color: red; */
-  } */
 
   .tgl_tes {
       font-family: 'Montserrat-SemiBold';
@@ -143,10 +132,10 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="public/assets/sertifikat/feedback-writing-1.png" style="width: 210mm; height: 297mm; margin: 0;" />
+    <img src="public/assets/sertifikat/writing-feedback-12.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
 
-  <div class="nilai_ta">
+  <!-- <div class="nilai_ta">
     <b><?= $nilai_ta_1?></b>
   </div>
 
@@ -160,7 +149,7 @@
 
   <div class="kriteria_cc">
     <?= $kriteria_cc_1?>
-  </div>
+  </div> -->
 
   <div class="nilai_lr">
     <b><?= $nilai_lr_1?></b>

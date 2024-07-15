@@ -28,10 +28,10 @@
     font-family: 'GothamBook';
     font-size: 30px;
     position: absolute;
-    top: 450px;
-    left: 85px;
-    width: 623px;
-    height: 720px;
+    top: 300px;
+    left: 0px;
+    width: 1120px;
+    height: 320px;
     /* background-color: red; */
     line-height: 1.5;
   }
@@ -48,7 +48,7 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="public/assets/sertifikat/cover.png" style="width: 210mm; height: 297mm; margin: 0;" />
+    <img src="public/assets/sertifikat/feedback-cover.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
   
   <div class="kriteria_ta" style="text-align: center">

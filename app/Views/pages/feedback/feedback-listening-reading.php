@@ -14,95 +14,30 @@
     /* background-color: red; */
   }
   
-  .nilai_ta {
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    position: absolute;
-    top: 160px;
-    left: 235px;
-    width: 500px;
-    /* background-color: red; */
-  }
-
   .kriteria_ta {
     font-family: 'GothamBook';
     font-size: 12px;
     position: absolute;
-    top: 303px;
-    left: 85px;
-    width: 623px;
-    height: 323px;
+    top: 223px;
+    left: 33px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
     line-height: 1.5;
-  }
-
-  .nilai_cc {
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    position: absolute;
-    top: 160px;
-    /* left: 420px; + 250 */
-    left: 845px;
-    width: 500px;
-    /* background-color: red; */
+    padding: 10px;
   }
 
   .kriteria_cc {
     font-family: 'GothamBook';
     font-size: 12px;
     position: absolute;
-    top: 713px;
-    /* left: 43px; */
-    left: 85px;
-    width: 623px;
-    /* height: 145px; */
-    height: 323px;
+    top: 223px;
+    left: 579px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
-  }
-
-  .nilai_lr {
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    position: absolute;
-    top: 390px;
-    /* left: 420px; + 250 */
-    left: 260px;
-    width: 500px;
-    /* background-color: red; */
-  }
-
-  .kriteria_lr {
-    font-family: 'GothamBook';
-    font-size: 14px;
-    position: absolute;
-    top: 439px;
-    left: 43px;
-    width: 504px;
-    height: 145px;
-    /* background-color: red; */
-  }
-
-  .nilai_gra {
-    font-family: 'Montserrat-SemiBold';
-    font-size: 25px;
-    position: absolute;
-    top: 390px;
-    /* left: 420px; + 250 */
-    left: 945px;
-    width: 500px;
-    /* background-color: red; */
-  }
-
-  .kriteria_gra {
-    font-family: 'GothamBook';
-    font-size: 14px;
-    position: absolute;
-    top: 439px;
-    /* left: 43px; */
-    left: 575px;
-    width: 504px;
-    height: 145px;
-    /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .tgl_tes {
@@ -127,7 +62,7 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="public/assets/sertifikat/feedback-listening-reading.png" style="width: 210mm; height: 297mm; margin: 0;" />
+    <img src="public/assets/sertifikat/writing-essay.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
   
   <div class="kriteria_ta">

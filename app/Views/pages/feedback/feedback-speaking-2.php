@@ -18,96 +18,96 @@
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 320px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 33px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_ta {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 274px; */
-    top: 259px;
+    top: 223px;
     left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .nilai_cc {
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 538px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 579px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_cc {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 439px; */
-    top: 476px;
-    left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    top: 223px;
+    left: 579px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .nilai_lr {
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 760px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 33px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_lr {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 604px; */
-    top: 699px;
+    top: 223px;
     left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .nilai_gra {
     font-family: 'Montserrat-SemiBold';
     font-size: 25px;
     position: absolute;
-    top: 985px;
-    left: 690px;
-    width: 80px;
+    top: 707px;
+    left: 579px;
+    width: 516px;
     /* background-color: red; */
     text-align: center;
   }
 
   .kriteria_gra {
     font-family: 'GothamBook';
-    font-size: 14px;
+    font-size: 12px;
     position: absolute;
-    /* top: 769px; */
-    top: 922px;
-    left: 33px;
-    width: 620px;
-    /* height: 118px; */
-    height: 160px;
+    top: 223px;
+    left: 579px;
+    width: 496px;
+    height: 456px;
     /* background-color: red; */
+    line-height: 1.5;
+    padding: 10px;
   }
 
   .tgl_tes {
@@ -132,7 +132,7 @@
     ?>
 
   <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="public/assets/sertifikat/feedback-speaking.png" style="width: 210mm; height: 297mm; margin: 0;" />
+    <img src="public/assets/sertifikat/speaking-feedback-2.png" style="width: 210mm; height: 297mm; margin: 0;" />
   </div>
 
   <!-- 'kriteria_topic' => $kriteria_topic,
@@ -144,7 +144,7 @@
   'kriteria_vocabulary' => $kriteria_vocabulary,
   'nilai_vocabulary' => $nilai_vocabulary, -->
 
-  <div class="nilai_ta">
+  <!-- <div class="nilai_ta">
     <b><?= $nilai_topic?></b>
   </div>
 
@@ -158,7 +158,7 @@
 
   <div class="kriteria_cc">
     <?= $kriteria_fluency?>
-  </div>
+  </div> -->
 
   <div class="nilai_lr">
     <b><?= $nilai_grammar?></b>
